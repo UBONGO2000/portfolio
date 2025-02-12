@@ -16,7 +16,7 @@ export const workData = [
         image: "./covp.png",
         github:'https://github.com/UBONGO2000/COVID-Project',
         view:'view',
-        link:'https://covid-project-three.vercel.app/home',
+        link:'https://covid-project-three.vercel.app/',
         tec: " technos :  HTML, CSS(tailwind css), javascript(Angular)",
     },
     {
@@ -35,7 +35,7 @@ export const workData = [
         github:'https://github.com/UBONGO2000/VitualG',
         view:'view',
         tec: "technos: React js, Lucide react, tailwindcss",
-        //link:''
+        link:'https://virtualg.vercel.app/'
     },
     // {
     //     title: 'UJUMBE : sociale media ',
@@ -44,7 +44,7 @@ export const workData = [
     //     github:'https://github.com/UBONGO2000/ujumbe',
     //     view: 'view',
     //     tec: " techno :  HTML, CSS, python(django)",
-    //     //link:''
+    //     link:''
     // },
     {
         title:'Blog-landingpage',
@@ -52,8 +52,16 @@ export const workData = [
         image:'/blog.png',
         github:'https://github.com/UBONGO2000/Blog',
         view:'',
-        tec:'TECHNO : HTML , CSS(tailwind css)',
+        tec:'technos : HTML , CSS(tailwind css)',
         link:'https://blog-ten-plum-60.vercel.app/'
+    },{
+        title:'flexneat',
+        description:" Creation d'une barre de recherche de film en utilisant l'api 'tvmaze' ",
+        image:'/flex.png',
+        github:'https://github.com/UBONGO2000/flexneat',
+        view:'',
+        tec:'technos : HTML , CSS, jquery',
+        link:'https://flexneat.vercel.app/'
     },
 
 ]

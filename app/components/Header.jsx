@@ -20,7 +20,7 @@ const Header = () => {
             web developper student
         </h1>
         <p className='max-w-2xl mx-auto font-Ovo'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, mollitia eum sit ratione quas sequi.
+        Currently looking for an internship in web/mobile development in presential or distancial on Toulouse and its surroundings
         </p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2'>contact me<MdArrowOutward /></a>

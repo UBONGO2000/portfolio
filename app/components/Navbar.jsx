@@ -21,12 +21,12 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className='w-full fixed gap-6 px-5 py-2 lg:px-8 xl:px-[8%] flex items-center justify-between z-50 bg-white bg-opacity-50 backdrop-blur-lg '>
+        <nav className='w-full fixed gap-6 px-5 py-2 lg:px-8 xl:px-[8%] flex items-center justify-between z-50 bg-white bg-opacity-50 backdrop-blur-lg ' >
         
             <div className='w-40'>
-                <a href="#top" >
-                    <Image src={assets.logo} ></Image>
-                </a>
+                <span>
+                    <Image src={assets.logo} alt="firstname logo"></Image>
+                </span>
             </div>
            
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 
             <div className='flex items-center gap-6'>
                 {/* moon  */}
-                <button>
+                <button className='hidden'>
                     <IoMoonOutline  className='text-2xl'/>
                 </button>
 

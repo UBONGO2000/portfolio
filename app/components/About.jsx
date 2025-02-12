@@ -1,7 +1,4 @@
 import React from 'react'
-import { infoList, toolsData } from '@/assets/assets'
-import { assets } from '@/assets/assets'
-import Image from 'next/image'
 import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -48,7 +45,7 @@ const About = () => {
 
             <div className='w-full justify-center'>
                 <p className='mb-10 font-Ovo '>
-                    I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.
+                I am a web development student at the IPI in Toulouse, passionate about creating impactful web, mobile and software solutions. I look forward to putting my skills into practice and contributing to innovative projects, whether at a distance or in the Toulouse region.
                 </p>
 {/* technos */}
                 <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TECHNOLOGIES</h3>
@@ -72,29 +69,29 @@ const About = () => {
 
                 </div>
 
-
+{/* Tools & Software */}
                 <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TOOLS & SOFTWARE</h3>
 
                 <div className='grid grid-rows-4 grid-flow-col gap-4 mb-10'>
 
                     
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <VscVscode /> <span>Vs code</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaJava /> <span>Libre office</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaPython /> <span>Github</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <IoLogoJavascript /><span>Git bash</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPhp /> <span>Docker</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiLibreofficeimpress /> <span>Libre office</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaGithub /> <span>Github</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaGitAlt /><span>Git bash</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaDocker /> <span>Docker</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <RiTailwindCssFill /> <span>Office 365</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaReact /> <span>Pycharm</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaAngular /> <span>Webstorm</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <TbSql /> <span>INTELLIJ IDEA</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiDjango /> <span>Eclipse</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiSpring /> <span>Postman</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <DiMongodb /> <span>Laragon</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPycharm /> <span>Pycharm</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiWebstorm /> <span>Webstorm</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiIntellijidea /> <span>INTELLIJ IDEA</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <span>Eclipse</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPostman /> <span>Postman</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiLaragon /> <span>Laragon</span></span>
                     
 
                 </div>
 
-
+{/* Educations */}
                 <div className='mt-10 p-5'>
 
                     <h3 className='mt-10 mb-10 text-center text-2xl font-bold font-Ovo'>EDUCATIONS</h3>

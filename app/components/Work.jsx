@@ -11,7 +11,7 @@ const Work = () => {
       <div id='work' className='w-full px-[12%] py-10 scroll-mt-20' >
         <h4 className='text-center mb-2 text-lg font-Ovo'>My portfolio</h4>
         <h2 className='text-center text-5xl font-Ovo'>My latest Work</h2>
-        <p className='text-center max-w-2xl mx-auto mt-5 mb-20 font-Ovo'>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</p>
+        <p className='text-center max-w-2xl mx-auto mt-5 mb-20 font-Ovo'>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in web development.</p>
 
         <div className='grid grid-cols-2 md:grid-cols-3 aspect-square gap-5 my-10 '>
             {workData.map((projects,index)=>(
@@ -33,7 +33,7 @@ const Work = () => {
                             
                             <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-50'>
                               
-                              <a href={projects.link} className='text-xl hover:scale-125'> 👁️‍🗨️  View</a>
+                              <a href={projects.link} className='text-xl hover:scale-125'> 👁️‍🗨️ View</a>
 
                             </button>
                         </div>
