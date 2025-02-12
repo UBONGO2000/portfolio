@@ -15,6 +15,20 @@ import { SiSpring } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 
 
+import { VscVscode } from "react-icons/vsc";
+import { FaDocker } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+import { SiLibreofficeimpress } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { SiPycharm } from "react-icons/si";
+import { SiIntellijidea } from "react-icons/si";
+import { SiWebstorm } from "react-icons/si";
+import { SiLaragon } from "react-icons/si";
+
+
+
+
 const About = () => {
   return (
     <>
@@ -33,7 +47,7 @@ const About = () => {
             </div> */}
 
             <div className='w-full justify-center'>
-                <p className='mb-10 font-Ovo text-xl'>
+                <p className='mb-10 font-Ovo '>
                     I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.
                 </p>
 {/* technos */}
@@ -54,6 +68,28 @@ const About = () => {
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiDjango /> <span>Django</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiSpring /> <span>Spring Boot</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <DiMongodb /> <span>MongoDB</span></span>
+                    
+
+                </div>
+
+
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TOOLS & SOFTWARE</h3>
+
+                <div className='grid grid-rows-4 grid-flow-col gap-4 mb-10'>
+
+                    
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <VscVscode /> <span>Vs code</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaJava /> <span>Libre office</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaPython /> <span>Github</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <IoLogoJavascript /><span>Git bash</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPhp /> <span>Docker</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <RiTailwindCssFill /> <span>Office 365</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaReact /> <span>Pycharm</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaAngular /> <span>Webstorm</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <TbSql /> <span>INTELLIJ IDEA</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiDjango /> <span>Eclipse</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiSpring /> <span>Postman</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <DiMongodb /> <span>Laragon</span></span>
                     
 
                 </div>
@@ -88,7 +124,7 @@ const About = () => {
                 </div>
                 
             
-
+{/* 
                 <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
 
                 <ul className='flex items-center gap-3 sm:gap-5'>
@@ -98,7 +134,7 @@ const About = () => {
                         </li>
                     ))}
 
-                </ul>
+                </ul> */}
             </div>
 
             </div>
