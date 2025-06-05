@@ -53,18 +53,18 @@ const About = () => {
                 <div className='grid grid-rows-4 grid-flow-col gap-4 mb-10'>
 
                     
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaPython /> <span>Python</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaJava /> <span>Java</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaPython /> <span>C++</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <IoLogoJavascript /> <span>Javascript</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPhp /> <span>PHP</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <RiTailwindCssFill /> <span>Tailwind css</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaReact /> <span>React</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaAngular /> <span>Angular</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <TbSql /> <span>SQL</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiDjango /> <span>Django</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiSpring /> <span>Spring Boot</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <DiMongodb /> <span>MongoDB</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaPython /> <span>Python</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaJava /> <span>Java</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaPython /> <span>C++</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <IoLogoJavascript /> <span>Javascript</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiPhp /> <span>PHP</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <RiTailwindCssFill /> <span>Tailwind css</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaReact /> <span>React</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaAngular /> <span>Angular</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <TbSql /> <span>SQL</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiDjango /> <span>Django</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiSpring /> <span>Spring Boot</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <DiMongodb /> <span>MongoDB</span></span>
                     
 
                 </div>
@@ -75,18 +75,18 @@ const About = () => {
                 <div className='grid grid-rows-4 grid-flow-col gap-4 mb-10'>
 
                     
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <VscVscode /> <span>Vs code</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiLibreofficeimpress /> <span>Libre office</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaGithub /> <span>Github</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaGitAlt /><span>Git bash</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <FaDocker /> <span>Docker</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <RiTailwindCssFill /> <span>Office 365</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPycharm /> <span>Pycharm</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiWebstorm /> <span>Webstorm</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiIntellijidea /> <span>INTELLIJ IDEA</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <span>Eclipse</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiPostman /> <span>Postman</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center'> <SiLaragon /> <span>Laragon</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <VscVscode /> <span>Vs code</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiLibreofficeimpress /> <span>Libre office</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaGithub /> <span>Github</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaGitAlt /><span>Git bash</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaDocker /> <span>Docker</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <RiTailwindCssFill /> <span>Office 365</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiPycharm /> <span>Pycharm</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiWebstorm /> <span>Webstorm</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiIntellijidea /> <span>INTELLIJ IDEA</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <span>Eclipse</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiPostman /> <span>Postman</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiLaragon /> <span>Laragon</span></span>
                     
 
                 </div>
@@ -96,22 +96,22 @@ const About = () => {
 
                     <h3 className='mt-10 mb-10 text-center text-2xl font-bold font-Ovo'>EDUCATIONS</h3>
 
-                    <div className='justify-center flex flex-row-reverse gap-2'>
+                    <div className='justify-center grid grid-cols-1 gap-4 md:grid-cols-3 md:justify-center md:items-center text-center'>
 
-                        <div className='p-5'>
-                            <h4 className='text-xl'> 🏫  IPI - Toulouse</h4>
+                        <div className='p-5 text-2xl'>
+                            <h4 > 🏫  IPI - Toulouse</h4>
                             <p>Bachelor 2 developpeur web</p>
                             <p>2024-présent</p>
                         </div>
 
-                        <div className='p-5'>
-                            <h4 className='text-xl'> 🏫  IPI - Toulouse</h4>
+                        <div className='p-5 text-2xl'>
+                            <h4> 🏫  IPI - Toulouse</h4>
                             <p>Bachelor 1 developpeur web</p>
                             <p>2023-2024</p>
                         </div>
 
-                        <div className='p-5'>
-                            <h4 className='text-xl'> 🏫  Université de Yaoundé 1</h4>
+                        <div className='p-5 text-2xl'>
+                            <h4> 🏫  Université de Yaoundé 1</h4>
                             <p >Licence en mathematique </p>
                             <p>2020-2023</p>
                         </div>

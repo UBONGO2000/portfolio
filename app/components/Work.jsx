@@ -13,9 +13,9 @@ const Work = () => {
         <h2 className='text-center text-5xl font-Ovo'>My latest Work</h2>
         <p className='text-center max-w-2xl mx-auto mt-5 mb-20 font-Ovo'>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in web development.</p>
 
-        <div className='grid grid-cols-2 md:grid-cols-3 aspect-square gap-5 my-10 '>
+        <div className='grid grid-cols-1 md:grid-cols-3 aspect-square gap-10 my-10'>
             {workData.map((projects,index)=>(
-                <div key={index} className='shadow-md  aspect-square rounded-md cursor-pointer ronded-lg hover:-translate-y-5 duration-500 hover:shadow-black'>
+                <div key={index} className='shadow-md  aspect-square rounded-md cursor-pointer ronded-lg hover:-translate-y-5 duration-500 hover:shadow-black dark:shadow-slate-50 dark:hover:shadow-white'>
                     
                     <div className='ronded-lg'>
                         <img src={projects.image} alt='image project' className='rounded-t-lg'></img>
@@ -23,16 +23,15 @@ const Work = () => {
 
                     <div className='p-5 text-left'>
                         <h1 className='text-bold  text-2xl font-Outfit  mb-5'>{projects.title}</h1>
-                        <p className='text-gray-500 px-3 font-Ovo'>{projects.description}</p>
+                        <p className='text-gray-50 px-3 font-Ovo'>{projects.description}</p>
                         <p className='text-bold '>{projects.tec}</p>
                         <div className="p-5 flex flex-col md:flex-row gap-5">
 
-                            <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-50'>
+                            <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-slate-50 dark:border-slate-50 dark:hover:bg-slate-50 dark:hover:text-gray-700'>
                               <a href={projects.github} className='text-xl  hover:scale-125'> github</a>
                             </button>
                             
-                            <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-50'>
-                              
+                            <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-50 dark:border-slate-50 dark:hover:bg-slate-50 dark:hover:text-gray-700'>
                               <a href={projects.link} className='text-xl hover:scale-125'> 👁️‍🗨️ View</a>
 
                             </button>

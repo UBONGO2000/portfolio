@@ -1,5 +1,7 @@
 import logo from './logo.png';
 import my from './moi.jpg';
+import header_bg_color from './header-bg-color.png';
+import mail_icon from './mail_icon.png'
 import { FaCode } from "react-icons/fa6";
 import { PiGraduationCap } from "react-icons/pi";
 import { PiSuitcaseSimpleLight } from "react-icons/pi";
@@ -7,6 +9,8 @@ import { PiSuitcaseSimpleLight } from "react-icons/pi";
 export const assets = {
     logo,
     my,
+    header_bg_color,
+    mail_icon,
 };
 
 export const workData = [

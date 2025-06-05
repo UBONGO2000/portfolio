@@ -8,7 +8,7 @@ import { MdArrowOutward } from "react-icons/md";
 const Header = () => {
   return (
     <>
-      <div id='top' className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4' style={{backgroundImage: "url(/header-bg-color.png)"}}>
+      <div id='top' className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4' >
         <div>
             <Image src={assets.my} alt="my picture" className='rounded-full w-32'/>
         </div>
@@ -23,8 +23,8 @@ const Header = () => {
         Currently looking for an internship in web/mobile development in presential or distancial on Toulouse and its surroundings
         </p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-            <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2'>contact me<MdArrowOutward /></a>
-            <a href="/CV_NTCHANGA_Georges.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>my resume <FaDownload/> </a>
+            <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me<MdArrowOutward /></a>
+            <a href="/CV_NTCHANGA_Georges.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <FaDownload/> </a>
 
         </div>
 
