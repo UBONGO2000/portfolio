@@ -57,7 +57,7 @@ const Contact = () => {
 
                 <textarea rows="6" placeholder='Enter your message' name='message' required className='w-full p-4 outline-nome border-[0.5px] border-gray-400 rounded-md bg-white mb-6'></textarea>
 
-                <button type="submit" className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black text-white rounded-full mx-auto hover:bg-black/80 duration-500'>Submit now</button>
+                <button type="submit" className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black text-white rounded-full mx-auto hover:bg-black/80 duration-500 dark:bg-slate-50 dark:text-black/80 dark:hover:bg-transparent dark:hover:text-slate-50 '>Submit now</button>
 
                 <p className='mt-4'>{result}</p>
 

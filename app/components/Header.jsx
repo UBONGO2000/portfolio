@@ -16,16 +16,15 @@ const Header = () => {
             Hi I'm Georges NTCHANGA <MdWavingHand/>
         </h3>
 
-        <h1 className='text sm:text-6xl lg:text-[60px] font-ovo'>
+        <h1 className='text-3xl sm:text-6xl lg:text-[60px] font-ovo'>
             web developper student
         </h1>
-        <p className='max-w-2xl mx-auto font-Ovo'>
+        <p className='max-w-2xl mx-auto my-4 font-Ovo text-xl'>
         Currently looking for an internship in web/mobile development in presential or distancial on Toulouse and its surroundings
         </p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me<MdArrowOutward /></a>
-            <a href="/CV_NTCHANGA_Georges.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <FaDownload/> </a>
-
+            <a href="/CV_Georges_NTCHANGA.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <FaDownload/> </a>
         </div>
 
       </div>

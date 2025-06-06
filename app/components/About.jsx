@@ -44,13 +44,13 @@ const About = () => {
             </div> */}
 
             <div className='w-full justify-center'>
-                <p className='mb-10 font-Ovo '>
+                <p className='mb-10 font-Ovo text-2xl text-center'>
                 I am a web development student at the IPI in Toulouse, passionate about creating impactful web, mobile and software solutions. I look forward to putting my skills into practice and contributing to innovative projects, whether at a distance or in the Toulouse region.
                 </p>
 {/* technos */}
                 <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TECHNOLOGIES</h3>
 
-                <div className='grid grid-rows-4 grid-flow-col gap-4 mb-10'>
+                <div className='grid sm:grid-rows-4 sm:grid-flow-col gap-4 mb-10'>
 
                     
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaPython /> <span>Python</span></span>
@@ -72,7 +72,7 @@ const About = () => {
 {/* Tools & Software */}
                 <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TOOLS & SOFTWARE</h3>
 
-                <div className='grid grid-rows-4 grid-flow-col gap-4 mb-10'>
+                <div className='grid sm:grid-rows-4 sm:grid-flow-col gap-4 mb-10'>
 
                     
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <VscVscode /> <span>Vs code</span></span>

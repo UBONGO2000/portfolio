@@ -48,14 +48,11 @@ export default function Home() {
     }
   }, [isDarkMode]);
 
-  // Optionnel : bouton pour changer le mode
-  // const toggleMode = () => setIsDarkMode(prev => !prev);
+
 
   return (
     <>
-      {/* <button onClick={toggleMode}>
-        {isDarkMode ? "Mode clair" : "Mode sombre"}
-      </button> */}
+      
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll}/>
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode}/> 

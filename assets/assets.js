@@ -1,4 +1,5 @@
 import logo from './logo.png';
+import logo_dark from './logo_dark.png';
 import my from './moi.jpg';
 import header_bg_color from './header-bg-color.png';
 import mail_icon from './mail_icon.png'
@@ -7,6 +8,7 @@ import { PiGraduationCap } from "react-icons/pi";
 import { PiSuitcaseSimpleLight } from "react-icons/pi";
 
 export const assets = {
+    logo_dark,
     logo,
     my,
     header_bg_color,
@@ -16,29 +18,29 @@ export const assets = {
 export const workData = [
     {
         title: 'Covid-alert',
-        description: "Creation d'un site web sur la censibilisation sur le COVID ",
+        description: "site web sur la censibilisation sur le COVID (fait dans le cadre scolaire) ",
         image: "./covp.png",
         github:'https://github.com/UBONGO2000/COVID-Project',
         view:'view',
         link:'https://covid-project-three.vercel.app/',
-        tec: " technos :  HTML, CSS(tailwind css), javascript(Angular)",
+        tec: ['HTML' , ' Tailwind CSS', 'Angular'],
     },
     {
         title: 'Landing-trip',
-        description: 'Creattion d\'une landingpage pour un site de voyage ',
+        description: 'Landingpage pour un site de voyage (suivie de tutoriel) ',
         image: '/trip.png',
         github: 'https://github.com/UBONGO2000/MES-PROJETS/tree/master/burgerphp',
         view:'view',
-        tec: " technos :  HTML, CSS(tailwind css)",
+        tec: ['HTML' , ' Tailwind CSS'],
         link:'https://vercel.com/ubongo2000s-projects/landing-trip'
     },
     {
         title: 'VirtualG',
-        description: "Creation d'une plateforme fictive pour virtualisation.",
+        description: "Plateforme fictive pour virtualisation. (suivie de tutoriel)",
         image: '/virtualG.png',
         github:'https://github.com/UBONGO2000/VitualG',
         view:'view',
-        tec: "technos: React js, Lucide react, tailwindcss",
+        tec: ['HTML','React js' , 'Tailwind CSS', 'Lucide react'],
         link:'https://virtualg.vercel.app/'
     },
     // {
@@ -52,11 +54,11 @@ export const workData = [
     // },
     {
         title:'Blog-landingpage',
-        description:" Creation d'une landing page pour blog avec trie d'articles ",
+        description:"landing page pour blog avec trie d'articles (suivie de tutoriel)",
         image:'/blog.png',
         github:'https://github.com/UBONGO2000/Blog',
         view:'',
-        tec:'technos : HTML , CSS(tailwind css)',
+        tec: ['HTML' , 'tailwind css'],
         link:'https://blog-ten-plum-60.vercel.app/'
     },{
         title:'flexneat',
@@ -64,7 +66,7 @@ export const workData = [
         image:'/flex.png',
         github:'https://github.com/UBONGO2000/flexneat',
         view:'',
-        tec:'technos : HTML , CSS, jquery',
+        tec:['HTML' , 'CSS', 'jquery'],
         link:'https://flexneat.vercel.app/'
     },
 

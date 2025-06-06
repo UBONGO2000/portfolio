@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import { MdArrowOutward } from "react-icons/md";
-import { IoMoonOutline,IoCloseOutline } from "react-icons/io5";
+import { IoMoonOutline,IoCloseOutline,IoSunnySharp } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 
 
@@ -29,7 +29,7 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
             <div className='w-40'>
 
                 <a href="#top">
-                    <Image src={assets.logo} alt="firstname logo" className='w-28 cursor-pointer mr-14'/>
+                    <Image src={isDarkMode? assets.logo_dark : assets.logo} alt="firstname logo" className='w-28 cursor-pointer mr-14'/>
                 </a>
                 
             </div>
@@ -45,9 +45,14 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
 
             <div className='flex items-center gap-6'>
                 {/* moon  */}
-                <button className='block ' onClick={()=> setIsDarkMode(prev => !prev)}>
-                    <IoMoonOutline   className={isDarkMode ? 'text-2xl' : ''}/>
+                <button className='block' onClick={() => setIsDarkMode(prev => !prev)}>
+                    {isDarkMode ? (
+                        <IoSunnySharp className="text-2xl" />
+                    ) : (
+                        <IoMoonOutline className="text-2xl" />
+                    )}
                 </button>
+
 
                 <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50'> Contact<MdArrowOutward /></a>
                 
@@ -60,7 +65,7 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
 
             {/* ----------------------------------------------- mobile menu --------------------------------------------------*/}
 
-            <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500 dark:bg-darkHover dark:text-white'>
+            <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500  dark:text-white dark:bg-darHover'>
                 
                 <IoCloseOutline className='text-4xl absolute right-6 top-6' onClick={closeMenu}/>
                 
