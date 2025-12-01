@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/27061e9c-e24d-4d67-93d7-6823646005f0/resourceGroups/Mon-portfolio/providers/Microsoft.Web/sites/portfolio-georges-ntchanga",
+    "appService.deploySubpath": "out"
+}
