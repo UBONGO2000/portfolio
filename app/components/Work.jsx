@@ -24,7 +24,7 @@ const Work = () => {
                     <div className='p-5 text-left'>
                         <h1 className='text-bold  text-2xl font-Outfit  mb-5'>{projects.title}</h1>
                         <p className='text-gray-500 dark:text-gray-50 px-3 font-Ovo'>{projects.description}</p>
-                       <div className="w-full font-bold flex flex-wrap gap-2 my-2">
+                      <div className="w-full font-bold flex flex-wrap gap-2 my-2">
                             {projects.tec.map((techno, idx) => (
                               <span
                                 key={idx}
