@@ -57,7 +57,7 @@ export const workData = [
         description:"landing page pour blog avec trie d'articles (suivie de tutoriel)",
         image:'/blog.png',
         github:'https://github.com/UBONGO2000/Blog',
-        view:'',
+        view:'view',
         tec: ['HTML' , 'tailwind css'],
         link:'https://blog-ten-plum-60.vercel.app/'
     },{
@@ -65,10 +65,22 @@ export const workData = [
         description:" Creation d'une barre de recherche de film en utilisant l'api 'tvmaze' ",
         image:'/flex.png',
         github:'https://github.com/UBONGO2000/flexneat',
-        view:'',
+        view:'view',
         tec:['HTML' , 'CSS', 'jquery'],
         link:'https://flexneat.vercel.app/'
     },
+
+    {
+        title:'streamvideo',
+        description:"Développement du backend d’une application de streaming vidéo, avec accent mis sur la sécurité et le contrôle d’accès : sécurisation des endpoints via Spring Security, authentification OAuth 2.0 (Google), gestion fine des rôles/permissions, et protection conditionnelle des ressources (vidéos, fonctionnalités) selon les droits utilisateur.",
+        image:'/streamvideo.png',
+        github:'https://github.com/UBONGO2000/streamvideo',
+        view:'view',
+        tec:['HTML' , 'CSS','mustache', 'Spring boot', 'java', "Spring security", "OAuth 2.0", "endpoints REST"],
+        link:'https://streamvideo.vercel.app/'
+    },
+
+
 
 ]
 

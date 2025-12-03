@@ -38,11 +38,11 @@ const Work = () => {
                         <div className="p-5 flex flex-col md:flex-row gap-5">
 
                             <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-slate-50 dark:border-slate-50 dark:hover:bg-slate-50 dark:hover:text-gray-700'>
-                              <a href={projects.github} className='text-xl  hover:scale-125'> github</a>
+                              <a href={projects.github} className='text-xl  hover:scale-125' target='_blank'> github</a>
                             </button>
                             
                             <button className='px-5 py-2 border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-50 dark:border-slate-50 dark:hover:bg-slate-50 dark:hover:text-gray-700'>
-                              <a href={projects.link} className='text-xl hover:scale-125'> 👁️‍🗨️ View</a>
+                              <a href={projects.link} className='text-xl hover:scale-125' target='_blank'> 👁️‍🗨️ View</a>
 
                             </button>
                         </div>
