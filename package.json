@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export",
+    //"build": "next build && next export",
+    "build": "next build",
     "postbuild": "shx cp -r assets/* public/",
     "start": "npm run serve:static",
     "serve:static": "serve -s out",
