@@ -12,3 +12,14 @@ const compat = new FlatCompat({
 const eslintConfig = [...compat.extends("next/core-web-vitals")];
 
 export default eslintConfig;
+
+
+
+// import nextPlugin from 'eslint-config-next';
+
+// export default [
+//   {
+//     ignores: ['**/.next/', '**/out/', '**/dist/'],
+//   },
+//   ...nextPlugin,
+// ];
