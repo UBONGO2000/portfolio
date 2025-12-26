@@ -43,15 +43,7 @@ export const workData = [
         tec: ['HTML','React js' , 'Tailwind CSS', 'Lucide react'],
         link:'https://virtualg.vercel.app/'
     },
-    // {
-    //     title: 'UJUMBE : sociale media ',
-    //     description: "Ce projet est creation d'un reseau sociale fictif type facebook creer avec le framwork python DJANGO",
-    //     image: '/work-4.png',
-    //     github:'https://github.com/UBONGO2000/ujumbe',
-    //     view: 'view',
-    //     tec: " techno :  HTML, CSS, python(django)",
-    //     link:''
-    // },
+    
     {
         title:'Blog-landingpage',
         description:"landing page pour blog avec trie d'articles (suivie de tutoriel)",
@@ -70,16 +62,25 @@ export const workData = [
         link:'https://flexneat.vercel.app/'
     },
 
-    {
-        title:'streamvideo',
-        description:"Développement du backend d’une application de streaming vidéo, avec accent mis sur la sécurité et le contrôle d’accès : sécurisation des endpoints via Spring Security, authentification OAuth 2.0 (Google), gestion fine des rôles/permissions, et protection conditionnelle des ressources (vidéos, fonctionnalités) selon les droits utilisateur.",
-        image:'/streamvideo.png',
-        github:'https://github.com/UBONGO2000/streamvideo',
-        view:'view',
-        tec:['HTML' , 'CSS','mustache', 'Spring boot', 'java', "Spring security", "OAuth 2.0", "endpoints REST"],
-        link:'https://streamvideo.vercel.app/'
-    },
+    // {
+    //     title:'streamvideo',
+    //     description:"Développement du backend d’une application de streaming vidéo, avec accent mis sur la sécurité et le contrôle d’accès : sécurisation des endpoints via Spring Security, authentification OAuth 2.0 (Google), gestion fine des rôles/permissions, et protection conditionnelle des ressources (vidéos, fonctionnalités) selon les droits utilisateur.",
+    //     image:'/streamvideo.png',
+    //     github:'https://github.com/UBONGO2000/streamvideo',
+    //     view:'view',
+    //     tec:['HTML' , 'CSS','mustache', 'Spring boot', 'java', "Spring security", "OAuth 2.0", "endpoints REST"],
+    //     link:'https://streamvideo.vercel.app/'
+    // },
 
+    // {
+    //     title: 'UJUMBE : sociale media ',
+    //     description: "Ce projet est creation d'un reseau sociale fictif type facebook creer avec le framwork python DJANGO",
+    //     image: '/work-4.png',
+    //     github:'https://github.com/UBONGO2000/ujumbe',
+    //     view: 'view',
+    //     tec: " techno :  HTML, CSS, python(django)",
+    //     link:''
+    // },
 
 
 ]
