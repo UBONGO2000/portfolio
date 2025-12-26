@@ -96,25 +96,22 @@ const About = () => {
 
                     <h3 className='mt-10 mb-10 text-center text-2xl font-bold font-Ovo'>EDUCATIONS</h3>
 
-                    <div className='justify-center grid grid-cols-1 gap-4 md:grid-cols-3 md:justify-center md:items-center text-center'>
+                    <div className='justify-center grid grid-cols-1 gap-4 md:grid-cols-2 md:justify-center md:items-center text-center'>
+
+                        <div className='p-5 text-2xl'>
+                            <h4> 🏫  University of Yaoundé 1</h4>
+                            <p >Bachelor's degree in mathematics </p>
+                            <p>2020-2023</p>
+                        </div>
+
 
                         <div className='p-5 text-2xl'>
                             <h4 > 🏫  IPI - Toulouse</h4>
-                            <p>Bachelor 2 developpeur web</p>
-                            <p>2024-présent</p>
+                            <p>Bachelor developpeur web/mobile</p>
+                            <p>2023-present</p>
                         </div>
 
-                        <div className='p-5 text-2xl'>
-                            <h4> 🏫  IPI - Toulouse</h4>
-                            <p>Bachelor 1 developpeur web</p>
-                            <p>2023-2024</p>
-                        </div>
-
-                        <div className='p-5 text-2xl'>
-                            <h4> 🏫  Université de Yaoundé 1</h4>
-                            <p >Licence en mathematique </p>
-                            <p>2020-2023</p>
-                        </div>
+                        
 
                     </div>
                     

@@ -20,11 +20,11 @@ const Header = () => {
             web developper student
         </h1>
         <p className='max-w-2xl mx-auto my-4 font-Ovo text-xl'>
-        Currently looking for an internship in web/mobile development in presential or distancial on Toulouse and its surroundings
+        As part of my bachelor's degree, I am currently looking for a work-study program or work-study internship in web/mobile development lasting 7 to 12 months, with a schedule of 3 weeks in the company and 1 week at school, either in person or remotely, in Toulouse, Paris, Lanion, Lille, and the surrounding areas.
         </p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me<MdArrowOutward /></a>
-            <a href="/CV_Georges_NTCHANGA.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <FaDownload/> </a>
+            <a href="/CV_NTCHANGA_Georges.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <FaDownload/> </a>
         </div>
 
       </div>
