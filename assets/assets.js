@@ -18,7 +18,7 @@ export const assets = {
 export const workData = [
     {
         title: 'Covid-alert',
-        description: "site web sur la censibilisation sur le COVID (fait dans le cadre scolaire) ",
+        description: "site web sur la censibilisation sur le COVID",
         image: "./covp.png",
         github:'https://github.com/UBONGO2000/COVID-Project',
         view:'view',
@@ -27,7 +27,7 @@ export const workData = [
     },
     {
         title: 'Landing-trip',
-        description: 'Landingpage pour un site de voyage (suivie de tutoriel) ',
+        description: 'Landingpage pour un site de voyage',
         image: '/trip.png',
         github: 'https://github.com/UBONGO2000/MES-PROJETS/tree/master/burgerphp',
         view:'view',
@@ -36,9 +36,9 @@ export const workData = [
     },
     {
         title: 'VirtualG',
-        description: "Plateforme fictive pour virtualisation. (suivie de tutoriel)",
+        description: "Plateforme fictive pour virtualisation.",
         image: '/virtualG.png',
-        github:'https://github.com/UBONGO2000/VitualG',
+        github:'https://github.com/UBONGO2000/VIRTUALG',
         view:'view',
         tec: ['HTML','React js' , 'Tailwind CSS', 'Lucide react'],
         link:'https://virtualg.vercel.app/'
@@ -46,7 +46,7 @@ export const workData = [
     
     {
         title:'Blog-landingpage',
-        description:"landing page pour blog avec trie d'articles (suivie de tutoriel)",
+        description:"landing page pour blog avec trie d'articles",
         image:'/blog.png',
         github:'https://github.com/UBONGO2000/Blog',
         view:'view',
@@ -61,6 +61,16 @@ export const workData = [
         tec:['HTML' , 'CSS', 'jquery'],
         link:'https://flexneat.vercel.app/'
     },
+    {
+        title:'BookingRoom',
+        description:"Application Spring Boot pour la réservation de salles avec authentification sécurisée, espace administrateur, gestion des réservations et recherche avancée. Stack technique : Java 17, Spring Security, Thymeleaf, PostgreSQL, Docker, tests.",
+        image:'/bookingroom.png',
+        github:'https://github.com/UBONGO2000/BookingRoom/',
+        view:'View',
+        tec:['HTML' , 'CSS', 'thymeleaf','java','spring boot','postgresql','docker','spring-test','spring-security'],
+        link:'https://bookingroom-qv0y.onrender.com/'
+    },
+
 
     // {
     //     title:'streamvideo',
