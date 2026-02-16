@@ -4,8 +4,11 @@ import {assets} from '@/assets/assets'
 import { MdWavingHand } from "react-icons/md";
 import { FaDownload } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
+import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
+  const { t } = useLanguage();
+  
   return (
     <>
       <div id='top' className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4' >
@@ -17,14 +20,14 @@ const Header = () => {
         </h3>
 
         <h1 className='text-3xl sm:text-6xl lg:text-[60px] font-ovo'>
-            web developper student
+            {t.header.role}
         </h1>
         <p className='max-w-2xl mx-auto my-4 font-Ovo text-xl'>
-        As part of my bachelor's degree, I am currently looking for a work-study program or work-study internship in web/mobile development lasting 7 to 12 months, with a schedule of 3 weeks in the company and 1 week at school, either in person or remotely, in Toulouse, Paris, Lanion, Lille, and the surrounding areas.
+        {t.header.description}
         </p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-            <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me<MdArrowOutward /></a>
-            <a href="/CV_NTCHANGA_Georges.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>my resume <FaDownload/> </a>
+            <a href="#contact" className='px-10 py-3 border rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>{t.header.contactMe}<MdArrowOutward /></a>
+            <a href="/CV_NTCHANGA_Georges.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>{t.header.myResume} <FaDownload/> </a>
         </div>
 
       </div>

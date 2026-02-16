@@ -1,0 +1,188 @@
+'use client'
+import React, { useState, useEffect } from 'react';
+import { useLanguage } from '@/app/context/LanguageContext';
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheck, FaPlay } from 'react-icons/fa';
+import Link from 'next/link';
+import Navbar from '@/app/components/Navbar';
+import Footer from '@/app/components/Footer';
+
+export default function ProjectClient({ project, projectId }) {
+  const { language, t } = useLanguage();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Dark mode detection
+    if (typeof window !== 'undefined') {
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDarkMode(theme === 'dark' || (!theme && prefersDark));
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScroll(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, [isDarkMode]);
+
+  if (!project) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+        <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300">
+          Projet non trouvé
+        </h1>
+        <p className="text-gray-500 dark:text-gray-400">
+          Le projet "{projectId}" n'existe pas.
+        </p>
+        <Link 
+          href="/#work" 
+          className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Retour aux projets
+        </Link>
+      </div>
+    );
+  }
+
+  const description = project.fullDescription?.[language] || project.description;
+  const features = project.features?.[language] || [];
+  const challenge = project.challenges?.[language] || '';
+
+  return (
+    <>
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
+      
+      <div className="min-h-screen pt-20 px-[12%]">
+        <Link 
+          href="/#work" 
+          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white mb-8 transition-colors"
+        >
+          <FaArrowLeft /> {language === 'fr' ? 'Retour' : 'Back'}
+        </Link>
+
+        <div className="max-w-4xl mx-auto">
+          {/* Project Header */}
+          <div className="mb-8">
+            <h1 className="text-4xl md:text-5xl font-Ovo font-bold mb-4">{project.title}</h1>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">{project.description}</p>
+          </div>
+
+          {/* Project Image */}
+          <div className="rounded-lg overflow-hidden shadow-lg mb-8">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Technologies */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-Ovo font-bold mb-4">
+              {language === 'fr' ? 'Technologies' : 'Technologies'}
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {project.tec.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm border border-blue-300 dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-Ovo font-bold mb-4">
+              {language === 'fr' ? 'Description' : 'Description'}
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              {description}
+            </p>
+          </div>
+
+          {/* Features */}
+          {features.length > 0 && (
+            <div className="mb-8">
+              <h2 className="text-2xl font-Ovo font-bold mb-4">
+                {language === 'fr' ? 'Fonctionnalités' : 'Features'}
+              </h2>
+              <ul className="space-y-3">
+                {features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <FaCheck className="text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Challenges */}
+          {challenge && (
+            <div className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h2 className="text-2xl font-Ovo font-bold mb-4">
+                {language === 'fr' ? 'Défis relevés' : 'Challenges Faced'}
+              </h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                {challenge}
+              </p>
+            </div>
+          )}
+
+          {/* Links */}
+          <div className="flex flex-wrap gap-4 mb-12">
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 dark:bg-white dark:text-gray-800 dark:hover:bg-gray-200 transition-colors"
+              >
+                <FaGithub /> {language === 'fr' ? 'Voir le code' : 'View Code'}
+              </a>
+            )}
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+              >
+                <FaPlay /> {language === 'fr' ? 'Voir la démo' : 'View Demo'}
+              </a>
+            )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+              >
+                <FaExternalLinkAlt /> {language === 'fr' ? 'Voir le projet' : 'View Project'}
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
+    </>
+  );
+}

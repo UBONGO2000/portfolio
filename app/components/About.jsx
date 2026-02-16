@@ -11,7 +11,6 @@ import { SiDjango } from "react-icons/si";
 import { SiSpring } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 
-
 import { VscVscode } from "react-icons/vsc";
 import { FaDocker } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
@@ -22,33 +21,30 @@ import { SiPycharm } from "react-icons/si";
 import { SiIntellijidea } from "react-icons/si";
 import { SiWebstorm } from "react-icons/si";
 import { SiLaragon } from "react-icons/si";
-
-
+import { useLanguage } from '../context/LanguageContext';
 
 
 const About = () => {
+  const { t } = useLanguage();
+  
   return (
     <>
       <div id="about" className='w-full px-[12%] py-10 scroll-m-20'>
             
             <h4 className='text-center mb-2 text-lg font-Ovo'>
-                Introduction
+                {t.about.introduction}
             </h4>
 
-            <h2 className='text-center text-5xl font-Ovo'>About me</h2>
+            <h2 className='text-center text-5xl font-Ovo'>{t.about.title}</h2>
             
             <div className='mt-20 flex flex-col md:flex-row gap-10'>
                 
-            {/* <div className='w-70 sm:w-80 max-w-none'>
-                <Image src={assets.my} className='rounded-lg'></Image>
-            </div> */}
-
             <div className='w-full justify-center'>
                 <p className='mb-10 font-Ovo text-2xl text-center'>
-                I am a web development student at the IPI in Toulouse, passionate about creating impactful web, mobile and software solutions. I look forward to putting my skills into practice and contributing to innovative projects, whether at a distance or in the Toulouse region.
+                {t.about.description}
                 </p>
 {/* technos */}
-                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TECHNOLOGIES</h3>
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.technologies}</h3>
 
                 <div className='grid sm:grid-rows-4 sm:grid-flow-col gap-4 mb-10'>
 
@@ -65,12 +61,12 @@ const About = () => {
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiDjango /> <span>Django</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiSpring /> <span>Spring Boot</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <DiMongodb /> <span>MongoDB</span></span>
-                    
+                      
 
                 </div>
 
 {/* Tools & Software */}
-                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>TOOLS & SOFTWARE</h3>
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.tools}</h3>
 
                 <div className='grid sm:grid-rows-4 sm:grid-flow-col gap-4 mb-10'>
 
@@ -87,28 +83,28 @@ const About = () => {
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <span>Eclipse</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiPostman /> <span>Postman</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiLaragon /> <span>Laragon</span></span>
-                    
+                      
 
                 </div>
 
 {/* Educations */}
                 <div className='mt-10 p-5'>
 
-                    <h3 className='mt-10 mb-10 text-center text-2xl font-bold font-Ovo'>EDUCATIONS</h3>
+                    <h3 className='mt-10 mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.education}</h3>
 
                     <div className='justify-center grid grid-cols-1 gap-4 md:grid-cols-2 md:justify-center md:items-center text-center'>
 
                         <div className='p-5 text-2xl'>
-                            <h4> 🏫  University of Yaoundé 1</h4>
-                            <p >Bachelor's degree in mathematics </p>
-                            <p>2020-2023</p>
+                            <h4> 🏫  {t.about.university}</h4>
+                            <p >{t.about.bachelorMath}</p>
+                            <p>{t.about.years}</p>
                         </div>
 
 
                         <div className='p-5 text-2xl'>
-                            <h4 > 🏫  IPI - Toulouse</h4>
-                            <p>Bachelor developpeur web/mobile</p>
-                            <p>2023-present</p>
+                            <h4 > 🏫  {t.about.ipi}</h4>
+                            <p>{t.about.webDev}</p>
+                            <p>{t.about.present}</p>
                         </div>
 
                         
@@ -117,9 +113,8 @@ const About = () => {
                     
                 </div>
                 
-            
-{/* 
-                <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
+ 
+                {/* <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
 
                 <ul className='flex items-center gap-3 sm:gap-5'>
                     {toolsData.map((tool,index)=>(

@@ -1,15 +1,16 @@
 import { assets } from '@/assets/assets'
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import { MdArrowOutward } from "react-icons/md";
 import { IoMoonOutline,IoCloseOutline,IoSunnySharp } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
-
+import { useLanguage } from '../context/LanguageContext';
 
 
 const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
 
   const sideMenuRef = useRef();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const openMenu = () =>{
     sideMenuRef.current.style.transform = 'translateX(-16rem)'
@@ -36,11 +37,10 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
            
 
             <ul className='hidden md:flex items-center gap-10 lg:gap-16 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:bg-transparent'>
-                <li><a className='font-Ovo' href="#top">Home</a></li>
-                <li><a className='font-Ovo' href="#about">About me</a></li>
-                {/* <li><a className='font-Ovo' href="#services">Services</a></li> */}
-                <li><a className='font-Ovo' href="#work">My Work</a></li>
-                <li><a className='font-Ovo' href="#contact">Contact me</a></li>
+                <li><a className='font-Ovo' href="#top">{t.nav.home}</a></li>
+                <li><a className='font-Ovo' href="#about">{t.nav.about}</a></li>
+                <li><a className='font-Ovo' href="#work">{t.nav.work}</a></li>
+                <li><a className='font-Ovo' href="#contact">{t.nav.contact}</a></li>
             </ul>
 
             <div className='flex items-center gap-6'>
@@ -53,8 +53,15 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
                     )}
                 </button>
 
+                {/* Language toggle */}
+                <button 
+                    onClick={toggleLanguage}
+                    className='px-3 py-1 border border-gray-500 rounded-full text-sm font-Ovo dark:border-white/50'
+                >
+                    {language === 'fr' ? 'EN' : 'FR'}
+                </button>
 
-                <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50'> Contact<MdArrowOutward /></a>
+                <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50'> {t.nav.contactMe}<MdArrowOutward /></a>
                 
                 {/* menu */}
                 <button className='block md:hidden ml-3' onClick={openMenu}>
@@ -69,11 +76,10 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
                 
                 <IoCloseOutline className='text-4xl absolute right-6 top-6' onClick={closeMenu}/>
                 
-                <li><a onClick={closeMenu} className='font-Ovo' href="#top">Home</a></li>
-                <li><a onClick={closeMenu} className='font-Ovo' href="#about">About me</a></li>
-                <li><a onClick={closeMenu} className='font-Ovo' href="#services">Services</a></li>
-                <li><a onClick={closeMenu} className='font-Ovo' href="#work">My Work</a></li>
-                <li><a onClick={closeMenu} className='font-Ovo' href="#contact">Contact me</a></li>
+                <li><a onClick={closeMenu} className='font-Ovo' href="#top">{t.nav.home}</a></li>
+                <li><a onClick={closeMenu} className='font-Ovo' href="#about">{t.nav.about}</a></li>
+                <li><a onClick={closeMenu} className='font-Ovo' href="#work">{t.nav.work}</a></li>
+                <li><a onClick={closeMenu} className='font-Ovo' href="#contact">{t.nav.contact}</a></li>
             </ul>
 
         </nav>
