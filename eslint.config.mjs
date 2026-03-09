@@ -7,19 +7,18 @@ const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
+  recommendedConfig: {
+    rules: {
+      "no-unused-vars": "warn",
+    },
+  },
 });
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
+const eslintConfig = [
+  {
+    ignores: ["**/.next/", "**/out/", "**/dist/", "**/node_modules/"],
+  },
+  ...compat.extends("next/core-web-vitals"),
+];
 
 export default eslintConfig;
-
-
-
-// import nextPlugin from 'eslint-config-next';
-
-// export default [
-//   {
-//     ignores: ['**/.next/', '**/out/', '**/dist/'],
-//   },
-//   ...nextPlugin,
-// ];
