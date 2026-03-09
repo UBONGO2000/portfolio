@@ -1,16 +1,16 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheck, FaPlay } from 'react-icons/fa';
 import Link from 'next/link';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
+import { motion } from 'framer-motion';
 
 export default function ProjectClient({ project, projectId }) {
   const { language, t } = useLanguage();
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Dark mode detection
@@ -58,45 +58,73 @@ export default function ProjectClient({ project, projectId }) {
     );
   }
 
+  // Support both old (fullDescription) and new (fullDescription) structures
   const description = project.fullDescription?.[language] || project.description;
   const features = project.features?.[language] || [];
   const challenge = project.challenges?.[language] || '';
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
 
   return (
     <>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
       
-      <div className="min-h-screen pt-20 px-[12%]">
-        <Link 
-          href="/#work" 
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white mb-8 transition-colors"
-        >
-          <FaArrowLeft /> {language === 'fr' ? 'Retour' : 'Back'}
-        </Link>
+      <motion.div 
+        className="min-h-screen pt-20 px-[12%]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={itemVariants}>
+          <Link 
+            href="/#work" 
+            className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white mb-8 transition-colors"
+          >
+            <FaArrowLeft /> {language === 'fr' ? 'Retour' : 'Back'}
+          </Link>
+        </motion.div>
 
         <div className="max-w-4xl mx-auto">
           {/* Project Header */}
-          <div className="mb-8">
+          <motion.div variants={itemVariants} className="mb-8">
             <h1 className="text-4xl md:text-5xl font-Ovo font-bold mb-4">{project.title}</h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg">{project.description}</p>
-          </div>
+          </motion.div>
 
           {/* Project Image */}
-          <div className="rounded-lg overflow-hidden shadow-lg mb-8">
+          <motion.div variants={itemVariants} className="rounded-lg overflow-hidden shadow-lg mb-8">
             <img 
               src={project.image} 
               alt={project.title}
               className="w-full h-auto"
             />
-          </div>
+          </motion.div>
 
           {/* Technologies */}
-          <div className="mb-8">
+          <motion.div variants={itemVariants} className="mb-8">
             <h2 className="text-2xl font-Ovo font-bold mb-4">
               {language === 'fr' ? 'Technologies' : 'Technologies'}
             </h2>
             <div className="flex flex-wrap gap-2">
-              {project.tec.map((tech, idx) => (
+              {project.technologies.map((tech, idx) => (
                 <span
                   key={idx}
                   className="rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm border border-blue-300 dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700"
@@ -105,21 +133,21 @@ export default function ProjectClient({ project, projectId }) {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Description */}
-          <div className="mb-8">
+          <motion.div variants={itemVariants} className="mb-8">
             <h2 className="text-2xl font-Ovo font-bold mb-4">
               {language === 'fr' ? 'Description' : 'Description'}
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               {description}
             </p>
-          </div>
+          </motion.div>
 
           {/* Features */}
           {features.length > 0 && (
-            <div className="mb-8">
+            <motion.div variants={itemVariants} className="mb-8">
               <h2 className="text-2xl font-Ovo font-bold mb-4">
                 {language === 'fr' ? 'Fonctionnalités' : 'Features'}
               </h2>
@@ -131,23 +159,23 @@ export default function ProjectClient({ project, projectId }) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           )}
 
           {/* Challenges */}
           {challenge && (
-            <div className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+            <motion.div variants={itemVariants} className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <h2 className="text-2xl font-Ovo font-bold mb-4">
                 {language === 'fr' ? 'Défis relevés' : 'Challenges Faced'}
               </h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 {challenge}
               </p>
-            </div>
+            </motion.div>
           )}
 
           {/* Links */}
-          <div className="flex flex-wrap gap-4 mb-12">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-12">
             {project.github && (
               <a
                 href={project.github}
@@ -178,9 +206,9 @@ export default function ProjectClient({ project, projectId }) {
                 <FaExternalLinkAlt /> {language === 'fr' ? 'Voir le projet' : 'View Project'}
               </a>
             )}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
     </>

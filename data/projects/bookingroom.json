@@ -1,0 +1,33 @@
+{
+  "id": "bookingroom",
+  "title": "BookingRoom",
+  "description": "Application Spring Boot pour la réservation de salles",
+  "image": "/bookingroom.png",
+  "github": "https://github.com/UBONGO2000/BookingRoom/",
+  "demo": "https://bookingroom-qv0y.onrender.com/",
+  "technologies": ["HTML", "CSS", "Thymeleaf", "Java", "Spring Boot", "PostgreSQL", "Docker", "Spring Security"],
+  "fullDescription": {
+    "fr": "BookingRoom est une application complète de réservation de salles développée avec Spring Boot. Elle offre une authentification sécurisée, un espace administrateur, une gestion complète des réservations et une recherche avancée. Le projet utilise PostgreSQL comme base de données et Docker pour le déploiement.",
+    "en": "BookingRoom is a complete room booking application developed with Spring Boot. It offers secure authentication, an admin space, complete reservation management, and advanced search. The project uses PostgreSQL as the database and Docker for deployment."
+  },
+  "features": {
+    "fr": [
+      "Authentification sécurisée avec Spring Security",
+      "Espace administrateur complet",
+      "Gestion des réservations (création, modification, annulation)",
+      "Recherche avancée de salles",
+      "Dockerisation de l'application"
+    ],
+    "en": [
+      "Secure authentication with Spring Security",
+      "Complete admin space",
+      "Reservation management (creation, modification, cancellation)",
+      "Advanced room search",
+      "Dockerization of the application"
+    ]
+  },
+  "challenges": {
+    "fr": "Implémentation d'un système d'authentification robuste et gestion des conflits de réservations simultanées.",
+    "en": "Implementing a robust authentication system and handling simultaneous reservation conflicts."
+  }
+}

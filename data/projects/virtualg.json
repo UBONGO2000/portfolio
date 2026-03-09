@@ -1,0 +1,31 @@
+{
+  "id": "virtualg",
+  "title": "VirtualG",
+  "description": "Plateforme fictive pour virtualisation",
+  "image": "/virtualG.png",
+  "github": "https://github.com/UBONGO2000/VIRTUALG",
+  "demo": "https://virtualg.vercel.app/",
+  "technologies": ["HTML", "React JS", "Tailwind CSS", "Lucide React"],
+  "fullDescription": {
+    "fr": "VirtualG est une plateforme fictive de virtualisation permettant aux utilisateurs de découvrir et d'explorer des environnements virtuels. Le projet démontre des compétences en React et en création d'interfaces utilisateur modernes.",
+    "en": "VirtualG is a fictional virtualization platform that allows users to discover and explore virtual environments. The project demonstrates skills in React and creating modern user interfaces."
+  },
+  "features": {
+    "fr": [
+      "Interface utilisateur moderne avec React",
+      "Navigation fluide entre les environnements",
+      "Animations et transitions fluides",
+      "Design responsive"
+    ],
+    "en": [
+      "Modern user interface with React",
+      "Smooth navigation between environments",
+      "Smooth animations and transitions",
+      "Responsive design"
+    ]
+  },
+  "challenges": {
+    "fr": "Implémentation d'une interface utilisateur réactive et fluide avec React et gestion des états complexes.",
+    "en": "Implementing a responsive and fluid user interface with React and managing complex states."
+  }
+}

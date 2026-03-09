@@ -1,0 +1,31 @@
+{
+  "id": "covid-alert",
+  "title": "Covid-alert",
+  "description": "Site web sur la sensibilisation sur le COVID",
+  "image": "/covp.png",
+  "github": "https://github.com/UBONGO2000/COVID-Project",
+  "demo": "https://covid-project-three.vercel.app/",
+  "technologies": ["HTML", "Tailwind CSS", "Angular"],
+  "fullDescription": {
+    "fr": "Covid-Alert est un site web de sensibilisation sur le COVID-19. Il fournit des informations actualisées sur la pandémie, les symptômes, les mesures de prévention et les ressources utiles. Le projet a été développé avec Angular pour le frontend et utilise une architecture moderne avec des composants réutilisables.",
+    "en": "Covid-Alert is a website for COVID-19 awareness. It provides updated information on the pandemic, symptoms, preventive measures, and useful resources. The project was developed with Angular for the frontend and uses a modern architecture with reusable components."
+  },
+  "features": {
+    "fr": [
+      "Tableau de bord avec statistiques en temps réel",
+      "Informations sur les symptômes et la prévention",
+      "Carte interactive des zones à risque",
+      "Ressources et liens utiles"
+    ],
+    "en": [
+      "Dashboard with real-time statistics",
+      "Information on symptoms and prevention",
+      "Interactive map of risk zones",
+      "Useful resources and links"
+    ]
+  },
+  "challenges": {
+    "fr": "Gestion des données en temps réel et conception d'une interface utilisateur intuitive pour présenter des informations complexes.",
+    "en": "Managing real-time data and designing an intuitive user interface to present complex information."
+  }
+}

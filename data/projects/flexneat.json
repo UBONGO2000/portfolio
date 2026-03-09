@@ -1,0 +1,31 @@
+{
+  "id": "flexneat",
+  "title": "Flexneat",
+  "description": "Création d'une barre de recherche de film en utilisant l'API TVMaze",
+  "image": "/flex.png",
+  "github": "https://github.com/UBONGO2000/flexneat",
+  "demo": "https://flexneat.vercel.app/",
+  "technologies": ["HTML", "CSS", "jQuery"],
+  "fullDescription": {
+    "fr": "FlexNeat est une application de recherche de films utilisant l'API TVMaze. Elle permet aux utilisateurs de rechercher des séries TV et des films, d'afficher des informations détaillées et de créer une liste de favoris.",
+    "en": "FlexNeat is a movie search application using the TVMaze API. It allows users to search for TV shows and movies, display detailed information, and create a favorites list."
+  },
+  "features": {
+    "fr": [
+      "Recherche en temps réel via l'API TVMaze",
+      "Affichage des détails des séries et films",
+      "Liste de favoris",
+      "Interface utilisateur intuitive"
+    ],
+    "en": [
+      "Real-time search via TVMaze API",
+      "Display of TV show and movie details",
+      "Favorites list",
+      "Intuitive user interface"
+    ]
+  },
+  "challenges": {
+    "fr": "Intégration efficace de l'API REST et gestion des requêtes asynchrones avec jQuery.",
+    "en": "Efficient integration of the REST API and handling asynchronous requests with jQuery."
+  }
+}

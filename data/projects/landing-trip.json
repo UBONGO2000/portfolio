@@ -1,0 +1,31 @@
+{
+  "id": "landing-trip",
+  "title": "Landing-trip",
+  "description": "Landing page pour un site de voyage",
+  "image": "/trip.png",
+  "github": "https://github.com/UBONGO2000/MES-PROJETS/tree/master/burgerphp",
+  "demo": "https://vercel.com/ubongo2000s-projects/landing-trip",
+  "technologies": ["HTML", "Tailwind CSS"],
+  "fullDescription": {
+    "fr": "Landing-Trip est une page d'atterrissage moderne et attrayante pour un site de voyage. Elle présente des destinations populaires, des offres spéciales et incite les utilisateurs à explorer et à réserver leurs prochaines vacances.",
+    "en": "Landing-Trip is a modern and attractive landing page for a travel website. It showcases popular destinations, special offers, and encourages users to explore and book their next vacation."
+  },
+  "features": {
+    "fr": [
+      "Design moderne et responsive",
+      "Galerie de destinations",
+      "Section des offres spéciales",
+      "Formulaire de contact simple"
+    ],
+    "en": [
+      "Modern and responsive design",
+      "Destination gallery",
+      "Special offers section",
+      "Simple contact form"
+    ]
+  },
+  "challenges": {
+    "fr": "Création d'un design visuellement attrayant tout en garantissant des performances optimales et une accessibilité maximale.",
+    "en": "Creating a visually appealing design while ensuring optimal performance and maximum accessibility."
+  }
+}

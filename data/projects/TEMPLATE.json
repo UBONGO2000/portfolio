@@ -1,0 +1,30 @@
+{
+  "id": "mon-nouveau-projet",
+  "title": "Mon Nouveau Projet",
+  "description": "Une courte description du projet",
+  "image": "/nom-de-limage.png",
+  "github": "https://github.com/votre-username/votre-repo",
+  "demo": "https://votre-demo.vercel.app/",
+  "technologies": ["React", "Next.js", "Tailwind CSS", "Node.js"],
+  "fullDescription": {
+    "fr": "Description complète en français...",
+    "en": "Full description in English..."
+  },
+  "features": {
+    "fr": [
+      "Fonctionnalité 1",
+      "Fonctionnalité 2",
+      "Fonctionnalité 3"
+    ],
+    "en": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3"
+    ]
+  },
+  "challenges": {
+    "fr": "Description du défi relevé en français...",
+    "en": "Description of challenges faced in English..."
+  },
+  "order": 0
+}

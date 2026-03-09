@@ -1,9 +1,9 @@
-import { workData } from '@/assets/assets';
+import { projects, getProjectById } from '@/data/projects';
 import ProjectClient from './ProjectClient';
 
 // Generate static params for static export
 export function generateStaticParams() {
-  return workData.map((project) => ({
+  return projects.map((project) => ({
     id: String(project.id),
   }));
 }
@@ -11,8 +11,8 @@ export function generateStaticParams() {
 export default async function ProjectDetail({ params }) {
   const { id } = await params;
   
-  // Find project by ID
-  const project = workData.find(p => String(p.id) === String(id)) || null;
+  // Find project by ID using the new data structure
+  const project = getProjectById(id);
 
   return <ProjectClient project={project} projectId={id} />;
 }

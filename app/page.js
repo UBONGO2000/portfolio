@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -7,11 +7,12 @@ import Social from "./components/Social";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
+import { projects } from "@/data/projects";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode,] = useState(false);
-
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
+  const [projectsData] = useState(projects);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,16 +49,13 @@ export default function Home() {
     }
   }, [isDarkMode]);
 
-
-
   return (
     <>
-      
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll}/>
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode}/> 
       <Social isDarkMode={isDarkMode}/>
-      <Work isDarkMode={isDarkMode}/>
+      <Work projects={projectsData}/>
       <Contact isDarkMode={isDarkMode}/>
       <Footer isDarkMode={isDarkMode}/>
     </>

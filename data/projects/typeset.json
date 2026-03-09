@@ -1,0 +1,34 @@
+{
+  "id": "TYPESET",
+  "title": "TYPESET",
+  "description": "Un site vitrine de type magazine en ligne, juste en HTML/CSS/JS vanilla.",
+  "image": "/typeset.png",
+  "github": "https://github.com/UBONGO2000/TYPESET",
+  "demo": "https://typeset-beta.vercel.app/",
+  "technologies": ["HTML", "CSS", "Javascript"],
+  "fullDescription": {
+    "fr": "Avec TYPESET, j'ai voulu imaginer un magazine éditorial qui rende hommage aux capacités actuelles du web. Pour ce faire, j'ai choisi de revenir aux fondamentaux : du HTML, du CSS et du JavaScript pur. C'est une manière de montrer que les outils natifs de 2025 offrent aujourd'hui toute la flexibilité nécessaire pour bâtir des expériences riches et fluides, tout en restant légères.",
+    "en": "With TYPESET, I wanted to imagine an editorial magazine that pays tribute to the current capabilities of the web. To do this, I chose to go back to basics: pure HTML, CSS and JavaScript. It's a way of showing that the native tools of 2025 offer all the flexibility needed today to build rich and fluid experiences, while remaining lightweight."
+  },
+  "features": {
+    "fr": [
+      "Filtrage des articles par catégorie (Design, Tech, Culture, Essai) en temps réel",
+      "Recherche live avec debounce 250ms — aucune requête inutile Thème clair / sombre persistant via localStorage",
+      "Date dynamique affichée en header",
+      "Ticker d'actualités défilant infini, pausé au hover",
+      "Bouton retour sur chaque page article"
+    ],
+    "en": [
+      "Real-time filtering of articles by category (Design, Tech, Culture, Essays)",
+      "Live search with 250ms debounce — no unnecessary queries Persistent light/dark theme via localStorage",
+      "Dynamic date displayed in header",
+      "Infinite scrolling news ticker, paused on hover",
+      "Back button on each article page"
+    ]
+  },
+  "challenges": {
+    "fr": "Ce projet relève sept défis techniques majeurs en privilégiant les standards natifs : l'usage des Scroll-driven animations, des View Transitions et des Container Queries assure une interface moderne et fluide. L'architecture repose sur un CSS modulaire rigoureux et une gestion du thème (dark/light) optimisée sans flash visuel. Enfin, le filtrage dynamique et le ticker infini sont réalisés en Vanilla JS et CSS pur, garantissant performance et accessibilité sans dépendances externes.",
+    "en": "This project addresses seven major technical challenges by prioritising native standards: the use of scroll-driven animations, view transitions and container queries ensures a modern and fluid interface. The architecture is based on rigorous modular CSS and optimised theme management (dark/light) without visual flash. Finally, dynamic filtering and the infinite ticker are implemented in pure Vanilla JS and CSS, guaranteeing performance and accessibility without external dependencies."
+  },
+  "order": 0
+}

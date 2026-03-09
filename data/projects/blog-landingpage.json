@@ -1,0 +1,31 @@
+{
+  "id": "blog-landingpage",
+  "title": "Blog-landingpage",
+  "description": "Landing page pour blog avec tri d'articles",
+  "image": "/blog.png",
+  "github": "https://github.com/UBONGO2000/Blog",
+  "demo": "https://blog-ten-plum-60.vercel.app/",
+  "technologies": ["HTML", "Tailwind CSS"],
+  "fullDescription": {
+    "fr": "Blog-Landingpage est une page d'atterrissage pour un blog avec fonctionnalité de tri d'articles. Elle permet aux utilisateurs de naviguer facilement parmi les articles et de trouver le contenu qui les intéresse.",
+    "en": "Blog-Landingpage is a landing page for a blog with article sorting functionality. It allows users to easily browse through articles and find content that interests them."
+  },
+  "features": {
+    "fr": [
+      "Système de filtrage par catégorie",
+      "Tri des articles par date et popularité",
+      "Design épuré et moderne",
+      "Animations de transition"
+    ],
+    "en": [
+      "Category filtering system",
+      "Sorting articles by date and popularity",
+      "Clean and modern design",
+      "Transition animations"
+    ]
+  },
+  "challenges": {
+    "fr": "Implémentation d'un système de filtrage et de tri performant sans rechargement de page.",
+    "en": "Implementing an efficient filtering and sorting system without page reload."
+  }
+}
