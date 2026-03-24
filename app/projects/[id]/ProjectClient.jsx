@@ -1,6 +1,7 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
+import { useDarkMode } from '@/app/context/DarkModeContext';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheck, FaPlay } from 'react-icons/fa';
 import Link from 'next/link';
 import Navbar from '@/app/components/Navbar';
@@ -9,35 +10,7 @@ import { motion } from 'framer-motion';
 
 export default function ProjectClient({ project, projectId }) {
   const { language, t } = useLanguage();
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isScroll, setIsScroll] = useState(false);
-
-  useEffect(() => {
-    // Dark mode detection
-    if (typeof window !== 'undefined') {
-      const theme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setIsDarkMode(theme === 'dark' || (!theme && prefersDark));
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScroll(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (isDarkMode) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    }
-  }, [isDarkMode]);
+  const { isDarkMode, setIsDarkMode, isScroll } = useDarkMode();
 
   if (!project) {
     return (
@@ -48,8 +21,8 @@ export default function ProjectClient({ project, projectId }) {
         <p className="text-gray-500 dark:text-gray-400">
           Le projet "{projectId}" n'existe pas.
         </p>
-        <Link 
-          href="/#work" 
+        <Link
+          href="/#work"
           className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
           Retour aux projets
@@ -58,12 +31,10 @@ export default function ProjectClient({ project, projectId }) {
     );
   }
 
-  // Support both old (fullDescription) and new (fullDescription) structures
   const description = project.fullDescription?.[language] || project.description;
   const features = project.features?.[language] || [];
   const challenge = project.challenges?.[language] || '';
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -86,16 +57,16 @@ export default function ProjectClient({ project, projectId }) {
   return (
     <>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
-      
-      <motion.div 
+
+      <motion.div
         className="min-h-screen pt-20 px-[12%]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div variants={itemVariants}>
-          <Link 
-            href="/#work" 
+          <Link
+            href="/#work"
             className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white mb-8 transition-colors"
           >
             <FaArrowLeft /> {language === 'fr' ? 'Retour' : 'Back'}
@@ -111,8 +82,8 @@ export default function ProjectClient({ project, projectId }) {
 
           {/* Project Image */}
           <motion.div variants={itemVariants} className="rounded-lg overflow-hidden shadow-lg mb-8">
-            <img 
-              src={project.image} 
+            <img
+              src={project.image}
               alt={project.title}
               className="w-full h-auto"
             />

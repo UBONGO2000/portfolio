@@ -6,58 +6,21 @@ import Work from "./components/Work";
 import Social from "./components/Social";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
+import { useDarkMode } from "./context/DarkModeContext";
 import { projects } from "@/data/projects";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isScroll, setIsScroll] = useState(false);
-  const [projectsData] = useState(projects);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScroll(window.scrollY > 10); // 10px de scroll pour activer
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Détection du mode sombre au montage
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const theme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-      if (theme === 'dark' || (!theme && prefersDark)) {
-        setIsDarkMode(true);
-      } else {
-        setIsDarkMode(false);
-      }
-    }
-  }, []);
-
-  // Application de la classe dark et synchronisation du localStorage
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (isDarkMode) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    }
-  }, [isDarkMode]);
+  const { isDarkMode, setIsDarkMode, isScroll } = useDarkMode();
 
   return (
     <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll}/>
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
       <Header isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode}/> 
-      <Social isDarkMode={isDarkMode}/>
-      <Work projects={projectsData}/>
-      <Contact isDarkMode={isDarkMode}/>
-      <Footer isDarkMode={isDarkMode}/>
+      <About isDarkMode={isDarkMode} />
+      <Social />
+      <Work projects={projects} />
+      <Contact isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 }

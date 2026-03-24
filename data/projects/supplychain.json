@@ -1,0 +1,40 @@
+{
+  "id": "supplychain",
+  "title": "Supplychain",
+  "description": "API REST complète pour la gestion de la chaîne d'approvisionnement",
+  "image": "/supplychain.png",
+  "github": "https://github.com/UBONGO2000/SupplyChain",
+  "demo": "https://supplychain-39y0.onrender.com/docs",
+  "technologies": ["python", "fastApi", "API rest", "mysql","authentification"],
+  "fullDescription": {
+    "fr": "API REST complète pour la gestion de la chaîne d'approvisionnement. Construite avec FastAPI et SQLAlchemy, elle offre un système CRUD complet pour les entrepôts, fournisseurs, produits, stocks, expéditions et commandes. L'application intègre une authentification JWT avec un contrôle d'accès basé sur les rôles (Admin, Manager, Staff, Viewer), une gestion automatique des réservations de stock lors des commandes, et un module d'analytiques avec des requêtes SQL complexes (agrégations, JOINs, sous-requêtes). Déployée sur Render avec support CORS pour un frontend Vercel.",
+    "en": "Comprehensive REST API for supply chain management. Built with FastAPI and SQLAlchemy, it provides full CRUD operations for warehouses, suppliers, products, inventory, shipments, and orders. The application features JWT authentication with role-based access control (Admin, Manager, Staff, Viewer), automatic inventory reservation during order creation, and an analytics module with complex SQL queries (aggregations, JOINs, subqueries). Deployed on Render with CORS support for a Vercel frontend."
+  },
+  "features": {
+    "fr": [
+      "CRUD complet pour entrepôts, fournisseurs, produits, stocks, expéditions et commandes",
+      "Authentification JWT avec contrôle d'accès basé sur les rôles (Admin, Manager, Staff, Viewer)",
+      "Gestion des stocks avec réservation automatique lors de la création de commandes",
+      "Module d'analytiques : résumé des ventes, alertes stock faible, top produits, performance fournisseurs",
+      "Pagination standardisée et filtrage avancé sur tous les endpoints",
+      "Validation des entrées avec Pydantic et documentation API auto-générée (Swagger UI + ReDoc)",
+      "Pool de connexions MySQL avec SQLAlchemy et mode strict SQL pour l'intégrité des données",
+      "Utilisateurs par défaut créés automatiquement au premier démarrage"
+    ],
+    "en": [
+      "Full CRUD for warehouses, suppliers, products, inventory, shipments, and orders",
+      "JWT authentication with role-based access control (Admin, Manager, Staff, Viewer)",
+      "Inventory management with automatic reservation during order creation",
+      "Analytics module: sales summary, low stock alerts, top products, supplier performance",
+      "Standardized pagination and advanced filtering on all endpoints",
+      "Input validation with Pydantic and auto-generated API documentation (Swagger UI + ReDoc)",
+      "MySQL connection pooling with SQLAlchemy and strict SQL mode for data integrity",
+      "Default users automatically created on first startup"
+    ]
+  },
+  "challenges": {
+    "fr": "Concevoir un système de réservation de stock atomique lors de la création de commandes, en garantissant l'intégrité des données sans verrouillage excessif de la base. Structurer des requêtes SQL complexes avec SQLAlchemy pour les analytiques (agrégations multi-tables, sous-requêtes de réapprovisionnement). Implémenter un contrôle d'accès granulaire à 4 niveaux sans alourdir la logique métier, et gérer la configuration CORS pour supporter à la fois le développement local et le déploiement multi-origine (Render + Vercel).",
+    "en": "Designing an atomic inventory reservation system during order creation that ensures data integrity without excessive database locking. Structuring complex SQL queries with SQLAlchemy for analytics (multi-table aggregations, reorder subqueries). Implementing granular 4-level access control without bloating business logic, and managing CORS configuration to support both local development and multi-origin deployment (Render + Vercel)."
+  },
+  "order": 8
+}

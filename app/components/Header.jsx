@@ -77,12 +77,11 @@ const Header = () => {
         </motion.h1>
 
         {/* Description */}
-        <motion.p 
+        <motion.div
           variants={itemVariants}
           className='max-w-2xl mx-auto my-4 font-Ovo text-xl'
-        >
-          {t.header.description}
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: t.header.description }}
+        />
 
         {/* CTA Buttons */}
         <motion.div 

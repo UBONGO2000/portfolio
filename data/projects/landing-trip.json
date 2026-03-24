@@ -1,31 +1,34 @@
 {
   "id": "landing-trip",
-  "title": "Landing-trip",
-  "description": "Landing page pour un site de voyage",
+  "title": "Landing-Trip",
+  "description": "Landing page responsive pour un site de voyage, en HTML et Tailwind CSS",
   "image": "/trip.png",
   "github": "https://github.com/UBONGO2000/MES-PROJETS/tree/master/burgerphp",
   "demo": "https://vercel.com/ubongo2000s-projects/landing-trip",
   "technologies": ["HTML", "Tailwind CSS"],
   "fullDescription": {
-    "fr": "Landing-Trip est une page d'atterrissage moderne et attrayante pour un site de voyage. Elle présente des destinations populaires, des offres spéciales et incite les utilisateurs à explorer et à réserver leurs prochaines vacances.",
-    "en": "Landing-Trip is a modern and attractive landing page for a travel website. It showcases popular destinations, special offers, and encourages users to explore and book their next vacation."
+    "fr": "Landing-Trip est l'une de mes premières landing pages, conçue pour un site de voyage fictif. Ce projet m'a aidé à apprivoiser Tailwind CSS et à mieux comprendre le responsive design. La page présente une galerie de destinations, une section d'offres et un formulaire de contact simple.",
+    "en": "Landing-Trip is one of my first landing pages, designed for a fictional travel website. This project helped me get to grips with Tailwind CSS and better understand responsive design. The page features a destination gallery, a special offers section, and a simple contact form."
   },
   "features": {
     "fr": [
-      "Design moderne et responsive",
-      "Galerie de destinations",
-      "Section des offres spéciales",
-      "Formulaire de contact simple"
+      "Design 100% responsive (mobile, tablette, desktop)",
+      "Galerie de destinations avec cartes interactives",
+      "Section offres spéciales avec mise en avant visuelle",
+      "Formulaire de contact fonctionnel",
+      "Animations CSS au scroll et au survol"
     ],
     "en": [
-      "Modern and responsive design",
-      "Destination gallery",
-      "Special offers section",
-      "Simple contact form"
+      "100% responsive design (mobile, tablet, desktop)",
+      "Destination gallery with interactive cards",
+      "Special offers section with visual highlights",
+      "Functional contact form",
+      "CSS animations on scroll and hover"
     ]
   },
   "challenges": {
-    "fr": "Création d'un design visuellement attrayant tout en garantissant des performances optimales et une accessibilité maximale.",
-    "en": "Creating a visually appealing design while ensuring optimal performance and maximum accessibility."
-  }
+    "fr": "Ce projet m'a confronté à la gestion fine du responsive design avec Tailwind CSS, notamment pour adapter la galerie de destinations sur différentes tailles d'écran. J'ai également appris à structurer un projet CSS de manière propre et maintenable dès le départ.",
+    "en": "This project confronted me with fine responsive design management with Tailwind CSS, particularly for adapting the destination gallery across different screen sizes. I also learned to structure a CSS project in a clean and maintainable way from the start."
+  },
+  "order": 1
 }

@@ -1,31 +1,34 @@
 {
   "id": "virtualg",
   "title": "VirtualG",
-  "description": "Plateforme fictive pour virtualisation",
+  "description": "Plateforme fictive de virtualisation avec interface moderne construite en React et Tailwind CSS",
   "image": "/virtualG.png",
   "github": "https://github.com/UBONGO2000/VIRTUALG",
   "demo": "https://virtualg.vercel.app/",
-  "technologies": ["HTML", "React JS", "Tailwind CSS", "Lucide React"],
+  "technologies": ["React", "JavaScript", "Tailwind CSS", "Lucide React"],
   "fullDescription": {
-    "fr": "VirtualG est une plateforme fictive de virtualisation permettant aux utilisateurs de découvrir et d'explorer des environnements virtuels. Le projet démontre des compétences en React et en création d'interfaces utilisateur modernes.",
-    "en": "VirtualG is a fictional virtualization platform that allows users to discover and explore virtual environments. The project demonstrates skills in React and creating modern user interfaces."
+    "fr": "VirtualG est une plateforme fictive de virtualisation que j'ai développée pour pratiquer React. Le projet se concentre sur la création de composants réutilisables, la gestion des props et l'organisation d'un projet React. L'interface propose une navigation entre plusieurs environnements virtuels, avec des animations et des transitions CSS.",
+    "en": "VirtualG is a fictional virtualization platform that I developed to practice React. The project focuses on creating reusable components, managing props, and organizing a React project. The interface offers navigation between multiple virtual environments, with CSS animations and transitions."
   },
   "features": {
     "fr": [
-      "Interface utilisateur moderne avec React",
-      "Navigation fluide entre les environnements",
-      "Animations et transitions fluides",
-      "Design responsive"
+      "Composants React réutilisables et modulaires",
+      "Navigation fluide entre les environnements virtuels",
+      "Animations et transitions avec CSS et React",
+      "Design responsive avec Tailwind CSS",
+      "Icônes vectorielles avec Lucide React"
     ],
     "en": [
-      "Modern user interface with React",
-      "Smooth navigation between environments",
-      "Smooth animations and transitions",
-      "Responsive design"
+      "Reusable and modular React components",
+      "Smooth navigation between virtual environments",
+      "Animations and transitions with CSS and React",
+      "Responsive design with Tailwind CSS",
+      "Vector icons with Lucide React"
     ]
   },
   "challenges": {
-    "fr": "Implémentation d'une interface utilisateur réactive et fluide avec React et gestion des états complexes.",
-    "en": "Implementing a responsive and fluid user interface with React and managing complex states."
-  }
+    "fr": "Ce projet m'a poussé à comprendre la composition de composants React, la gestion du state local vs global, et les bonnes pratiques de structuration d'un projet React. L'implémentation d'animations fluides sans bibliothèque externe a été un exercice formateur sur les capacités de CSS combinées au rendu React.",
+    "en": "This project pushed me to understand React component composition, local vs global state management, and best practices for structuring a React project. Implementing smooth animations without an external library was a formative exercise on CSS capabilities combined with React rendering."
+  },
+  "order": 6
 }

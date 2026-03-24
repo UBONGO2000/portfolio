@@ -1,31 +1,34 @@
 {
   "id": "flexneat",
-  "title": "Flexneat",
-  "description": "Création d'une barre de recherche de film en utilisant l'API TVMaze",
+  "title": "FlexNeat",
+  "description": "Application de recherche de films et séries avec l'API TVMaze, développée en jQuery",
   "image": "/flex.png",
   "github": "https://github.com/UBONGO2000/flexneat",
   "demo": "https://flexneat.vercel.app/",
-  "technologies": ["HTML", "CSS", "jQuery"],
+  "technologies": ["HTML", "CSS", "jQuery", "API REST"],
   "fullDescription": {
-    "fr": "FlexNeat est une application de recherche de films utilisant l'API TVMaze. Elle permet aux utilisateurs de rechercher des séries TV et des films, d'afficher des informations détaillées et de créer une liste de favoris.",
-    "en": "FlexNeat is a movie search application using the TVMaze API. It allows users to search for TV shows and movies, display detailed information, and create a favorites list."
+    "fr": "FlexNeat est une application de recherche de films et séries TV qui consomme l'API publique TVMaze. Ce projet m'a permis de découvrir la consommation d'API REST et les requêtes asynchrones avec jQuery. L'utilisateur peut rechercher des séries en temps réel, consulter les détails de chaque programme et gérer une liste de favoris. C'est l'un de mes premiers projets interactifs avec des données externes.",
+    "en": "FlexNeat is a movie and TV show search application that consumes the public TVMaze API. This project allowed me to discover REST API consumption and asynchronous requests with jQuery. Users can search for shows in real time, view details of each program, and manage a favorites list. It is one of my first interactive projects with external data."
   },
   "features": {
     "fr": [
       "Recherche en temps réel via l'API TVMaze",
-      "Affichage des détails des séries et films",
-      "Liste de favoris",
-      "Interface utilisateur intuitive"
+      "Affichage des détails des séries (casting, synopsis, note)",
+      "Système de favoris avec stockage local",
+      "Interface utilisateur intuitive et responsive",
+      "Gestion des états de chargement et d'erreur"
     ],
     "en": [
       "Real-time search via TVMaze API",
-      "Display of TV show and movie details",
-      "Favorites list",
-      "Intuitive user interface"
+      "Display of TV show details (cast, synopsis, rating)",
+      "Favorites system with local storage",
+      "Intuitive and responsive user interface",
+      "Loading and error state management"
     ]
   },
   "challenges": {
-    "fr": "Intégration efficace de l'API REST et gestion des requêtes asynchrones avec jQuery.",
-    "en": "Efficient integration of the REST API and handling asynchronous requests with jQuery."
-  }
+    "fr": "Ce projet a été l'occasion de comprendre en profondeur les appels asynchrones et la gestion des erreurs réseau. L'intégration de l'API TVMaze avec jQuery m'a appris à structurer les requêtes AJAX, gérer les timeouts et afficher des retours utilisateur appropriés en cas d'échec.",
+    "en": "This project was an opportunity to deeply understand asynchronous calls and network error management. Integrating the TVMaze API with jQuery taught me to structure AJAX requests, handle timeouts, and display appropriate user feedback in case of failure."
+  },
+  "order": 4
 }

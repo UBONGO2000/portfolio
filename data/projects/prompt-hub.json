@@ -1,0 +1,57 @@
+{
+  "id": "Prompt-hub",
+  "title": "Prompt Hub",
+  "description": "Application de partage et de découverte de prompts IA",
+  "image": "/prompt-hub.png",
+  "github": "https://github.com/UBONGO2000/prompt-hub-frontend",
+  "demo": "https://prompt-hub-frontend-dun.vercel.app/prompts",
+  "technologies": [
+    "Angular 21",
+    "TypeScript",
+    "RxJS",
+    "NestJS",
+    "JWT Auth",
+    "SCSS",
+    "Swagger",
+    "Vitest"
+  ],
+  "fullDescription": {
+    "fr": "Prompt Hub est une application fullstack permettant de parcourir, créer, éditer et voter sur des prompts organisés par catégories. Le backend est une API REST construite avec NestJS, reprise intégralement du tutoriel de Gaëtan Rouziès. Le frontend Angular a été développé à partir de ce même tutoriel, puis personnalisé et étendu avec une authentification complète (JWT + cookies httpOnly), un système de votes upvote/downvote, des guards de route, des notifications toast, un thème clair/sombre, et des optimisations de performance (lazy loading, @defer blocks, OnPush change detection, signals). L'application utilise un fichier JSON local comme base de données et supporte deux modes d'exécution : un mode libre pour le développement et un mode authentifié pour la production.",
+    "en": "Prompt Hub is a fullstack application for browsing, creating, editing, and voting on prompts organized by categories. The backend is a REST API built with NestJS, taken entirely from Gaëtan Rouziès' tutorial. The Angular frontend was developed from the same tutorial, then customized and extended with complete authentication (JWT + httpOnly cookies), an upvote/downvote voting system, route guards, toast notifications, a light/dark theme, and performance optimizations (lazy loading, @defer blocks, OnPush change detection, signals). The app uses a local JSON file as its database and supports two execution modes: a free mode for development and an authenticated mode for production."
+  },
+  "features": {
+    "fr": [
+      "Authentification complète (inscription, connexion, déconnexion) avec JWT et cookies httpOnly",
+      "CRUD complet des prompts avec restriction par auteur",
+      "Système de votes upvote/downvote avec toggle par utilisateur",
+      "Organisation des prompts par catégories",
+      "Thème clair / sombre avec persistance dans localStorage",
+      "Notifications toast (succès, erreur, info) avec auto-dismiss",
+      "Copie rapide du contenu d'un prompt dans le presse-papiers",
+      "Édition inline des prompts directement dans les cartes",
+      "Responsive design (mobile, tablette, desktop)",
+      "Lazy loading des routes et chargement différé avec @defer blocks",
+      "Documentation API Swagger intégrée",
+      "Optimisations de performance (OnPush, signals, computed values)"
+    ],
+    "en": [
+      "Complete authentication (registration, login, logout) with JWT and httpOnly cookies",
+      "Full CRUD for prompts with author-based access control",
+      "Upvote/downvote voting system with per-user toggle",
+      "Prompts organized by categories",
+      "Light / dark theme with localStorage persistence",
+      "Toast notifications (success, error, info) with auto-dismiss",
+      "Quick copy of prompt content to clipboard",
+      "Inline editing of prompts directly in cards",
+      "Responsive design (mobile, tablet, desktop)",
+      "Route lazy loading and deferred loading with @defer blocks",
+      "Integrated Swagger API documentation",
+      "Performance optimizations (OnPush, signals, computed values)"
+    ]
+  },
+  "challenges": {
+    "fr": "Le principal défi de ce projet a été de personnaliser et d'étendre un projet issu d'un tutoriel en y ajoutant des fonctionnalités avancées : implémentation d'une authentification JWT complète avec guards de route, création d'un système de votes avec gestion des états concurrents, intégration d'un système de thème dynamique, et optimisation des performances avec les nouvelles fonctionnalités d'Angular 21 (signals, @defer blocks, OnPush). La gestion de la persistance avec un fichier JSON local a également nécessité une attention particulière pour gérer les migrations de schéma et les accès concurrents.",
+    "en": "The main challenge of this project was customizing and extending a tutorial-based project with advanced features: implementing complete JWT authentication with route guards, creating a voting system with concurrent state management, integrating a dynamic theme system, and optimizing performance with Angular 21's new features (signals, @defer blocks, OnPush). Managing persistence with a local JSON file also required careful attention to handle schema migrations and concurrent access."
+  },
+  "order": 4
+}

@@ -1,33 +1,38 @@
 {
   "id": "finova",
-  "title": "finova",
-  "description": "Dashboard bancaire & financier personnel, style Stripe, ES Modules.",
+  "title": "Finova",
+  "description": "Dashboard financier personnel en JavaScript vanilla, avec appel d'APIs et graphiques Canvas",
   "image": "/finova.png",
   "github": "https://github.com/UBONGO2000/FINOVA",
   "demo": "https://finova-orpin-six.vercel.app/",
-  "technologies": ["HTML", "CSS", "Javascript", "API","Frankfurter","CoinGecko API v3 "],
+  "technologies": ["HTML", "CSS", "JavaScript", "ES Modules", "Canvas API", "REST APIs"],
   "fullDescription": {
-    "fr": "FINOVA est un dashboard financier personnel style Stripe, construit entièrement en HTML, CSS et JavaScript vanilla modulaire (ES Modules), sans aucun framework. Il agrège en temps réel des données de taux de change et de cryptomonnaies via des APIs publiques gratuites, et intègre un simulateur de prêt avec tableau d'amortissement complet. L'architecture SPA (Single Page Application) avec router, cache HTTP, couche API découplée et composants réutilisables reflète les standards d'une application professionnelle scalable.",
-    "en": "FINOVA is a Stripe-style personal finance dashboard, built entirely in HTML, CSS and modular vanilla JavaScript (ES Modules), without any frameworks. It aggregates real-time exchange rate and cryptocurrency data via free public APIs, and includes a loan simulator with a comprehensive amortisation table. The SPA (Single Page Application) architecture with router, HTTP cache, decoupled API layer and reusable components reflects the standards of a scalable professional application."
+    "fr": "FINOVA est un dashboard financier personnel construit en HTML, CSS et JavaScript modulaire (ES Modules), sans framework. Il agrège des données de taux de change (API Frankfurter) et de cryptomonnaies (CoinGecko API), et intègre un simulateur de prêt avec tableau d'amortissement. Le projet m'a poussé à construire une architecture SPA avec router maison, un client HTTP avec cache, et des graphiques Canvas from scratch — des exercices qui m'ont beaucoup appris sur l'organisation du code sans framework.",
+    "en": "FINOVA is a personal finance dashboard built with HTML, CSS and modular JavaScript (ES Modules), without a framework. It aggregates exchange rate data (Frankfurter API) and cryptocurrency data (CoinGecko API), and includes a loan simulator with an amortization table. The project pushed me to build a SPA architecture with a custom router, an HTTP client with caching, and Canvas charts from scratch — exercises that taught me a lot about organizing code without a framework."
   },
   "features": {
     "fr": [
-      "Dashboard avec KPIs (portefeuille fictif, variation du jour)",
-      "Convertisseur de devises live",
-      "Tracker crypto top 10 avec graphique 7 jours",
-      "Simulateur de prêt avec tableau d'amortissement",
-      "Navigation SPA (sans rechargement de page)"
+      "Architecture SPA avec router maison (history API)",
+      "Dashboard avec KPIs : portefeuille, variation quotidienne",
+      "Convertisseur de devises en temps réel (API Frankfurter)",
+      "Tracker crypto top 10 avec graphique Canvas 7 jours",
+      "Simulateur de prêt avec tableau d'amortissement complet",
+      "Client HTTP avec cache et gestion d'erreurs",
+      "Graphiques Canvas (LineChart, Sparkline)"
     ],
     "en": [
-       "Dashboard with KPIs (fictitious portfolio, daily variation)",
-      "Live currency converter",
-      "Top 10 crypto tracker with 7-day chart",
-      "Loan simulator with amortisation table",
-      "SPA navigation (no page reloading)"
+      "SPA architecture with custom router (history API)",
+      "Dashboard with KPIs: portfolio, daily variation",
+      "Real-time currency converter (Frankfurter API)",
+      "Top 10 crypto tracker with 7-day Canvas chart",
+      "Loan simulator with complete amortization table",
+      "HTTP client with caching and error handling",
+      "Canvas charts (LineChart, Sparkline)"
     ]
   },
   "challenges": {
-    "fr": "La principale difficulté du projet a été de construire une architecture SPA robuste sans framework — implémenter un router, une gestion d'état et un système de pages dynamiques en vanilla JS pur demande une rigueur que React ou Vue gèrent automatiquement. La consommation simultanée de plusieurs APIs (Promise.all) avec gestion des erreurs, timeouts et cache en mémoire a nécessité un client HTTP sur mesure pour éviter les requêtes redondantes et garantir une expérience fluide même en cas de lenteur réseau. Le composant graphique LineChart et Sparkline ont été construits from scratch sur Canvas API sans bibliothèque externe, ce qui implique de gérer manuellement le rendu HiDPI (devicePixelRatio), les axes, les labels et les animations. Enfin, synchroniser quatre pages indépendantes avec un seul point d'entrée, une navigation sans rechargement et des transitions propres, tout en gardant le code lisible et extensible, a été le vrai défi d'architecture du projet.",
-    "en": "The main challenge of the project was to build a robust SPA architecture without a framework — implementing a router, state management, and a dynamic page system in pure vanilla JS requires a level of rigour that React or Vue handle automatically. The simultaneous consumption of multiple APIs (Promise.all) with error handling, timeouts, and in-memory caching required a custom HTTP client to avoid redundant requests and ensure a smooth experience even in the event of network slowness. The LineChart and Sparkline graphics components were built from scratch on the Canvas API without any external libraries, which meant manually managing HiDPI rendering (devicePixelRatio), axes, labels, and animations. Finally, synchronising four independent pages with a single entry point, reload-free navigation and clean transitions, while keeping the code readable and extensible, was the real architectural challenge of the project."
-  }
+    "fr": "Construire une SPA sans framework a été le plus grand défi : router, gestion d'état et navigation sans rechargement, tout en vanilla JS. Consommer plusieurs APIs en parallèle (Promise.all) avec gestion d'erreurs et cache m'a forcé à écrire un client HTTP structuré. Les graphiques Canvas — axes, labels, rendu HiDPI — ont été un excellent exercice de compréhension du Canvas API.",
+    "en": "Building a SPA without a framework was the biggest challenge: router, state management, and navigation without reloading, all in vanilla JS. Consuming multiple APIs in parallel (Promise.all) with error handling and caching forced me to write a structured HTTP client. The Canvas charts — axes, labels, HiDPI rendering — were an excellent exercise in understanding the Canvas API."
+  },
+  "order": 7
 }

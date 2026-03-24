@@ -1,31 +1,34 @@
 {
   "id": "blog-landingpage",
-  "title": "Blog-landingpage",
-  "description": "Landing page pour blog avec tri d'articles",
+  "title": "Blog-Landingpage",
+  "description": "Page d'atterrissage pour blog avec système de filtrage et tri d'articles en temps réel",
   "image": "/blog.png",
   "github": "https://github.com/UBONGO2000/Blog",
   "demo": "https://blog-ten-plum-60.vercel.app/",
-  "technologies": ["HTML", "Tailwind CSS"],
+  "technologies": ["HTML", "Tailwind CSS", "JavaScript"],
   "fullDescription": {
-    "fr": "Blog-Landingpage est une page d'atterrissage pour un blog avec fonctionnalité de tri d'articles. Elle permet aux utilisateurs de naviguer facilement parmi les articles et de trouver le contenu qui les intéresse.",
-    "en": "Blog-Landingpage is a landing page for a blog with article sorting functionality. It allows users to easily browse through articles and find content that interests them."
+    "fr": "Blog-Landingpage est une page d'atterrissage pour un blog avec un système de filtrage et de tri d'articles en JavaScript vanilla. Ce projet m'a permis de travailler la manipulation du DOM pour créer des interactions dynamiques : filtrage par catégorie, tri par date et popularité, sans rechargement de page.",
+    "en": "Blog-Landingpage is a landing page for a blog with a filtering and article sorting system in vanilla JavaScript. This project allowed me to work on DOM manipulation to create dynamic interactions: category filtering, sorting by date and popularity, without page reloading."
   },
   "features": {
     "fr": [
-      "Système de filtrage par catégorie",
+      "Système de filtrage par catégorie (Tech, Design, Lifestyle...)",
       "Tri des articles par date et popularité",
-      "Design épuré et moderne",
-      "Animations de transition"
+      "Design épuré et moderne avec Tailwind CSS",
+      "Animations de transition entre les filtres",
+      "Mise en page responsive avec grille adaptative"
     ],
     "en": [
-      "Category filtering system",
+      "Category filtering system (Tech, Design, Lifestyle...)",
       "Sorting articles by date and popularity",
-      "Clean and modern design",
-      "Transition animations"
+      "Clean and modern design with Tailwind CSS",
+      "Transition animations between filters",
+      "Responsive layout with adaptive grid"
     ]
   },
   "challenges": {
-    "fr": "Implémentation d'un système de filtrage et de tri performant sans rechargement de page.",
-    "en": "Implementing an efficient filtering and sorting system without page reload."
-  }
+    "fr": "Le principal défi a été d'implémenter un système de filtrage et de tri performant en JavaScript vanilla, sans bibliothèque externe. La gestion des transitions visuelles lors du changement de filtre, tout en maintenant la fluidité de l'interface, m'a poussé à optimiser la manipulation du DOM.",
+    "en": "The main challenge was implementing an efficient filtering and sorting system in vanilla JavaScript, without external libraries. Managing visual transitions when changing filters, while maintaining interface fluidity, pushed me to optimize DOM manipulation."
+  },
+  "order": 1
 }

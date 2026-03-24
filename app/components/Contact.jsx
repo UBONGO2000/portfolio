@@ -13,7 +13,7 @@ const Contact = () => {
     setResult(t.contact.sending);
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "bbebcc02-62e4-4c78-8769-edc89eabefc3");
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -105,7 +105,7 @@ const Contact = () => {
             placeholder={t.contact.message} 
             name='message' 
             required 
-            className='w-full p-4 outline-nome border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkTheme dark:border-white/50'
+            className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkTheme dark:border-white/50'
             whileFocus={{ scale: 1.02, borderColor: "#3b82f6" }}
           ></motion.textarea>
 

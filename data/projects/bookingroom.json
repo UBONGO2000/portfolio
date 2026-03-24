@@ -1,33 +1,40 @@
 {
   "id": "bookingroom",
   "title": "BookingRoom",
-  "description": "Application Spring Boot pour la réservation de salles",
+  "description": "Application de réservation de salles avec Spring Boot, authentification et déploiement Docker",
   "image": "/bookingroom.png",
   "github": "https://github.com/UBONGO2000/BookingRoom/",
   "demo": "https://bookingroom-qv0y.onrender.com/",
-  "technologies": ["HTML", "CSS", "Thymeleaf", "Java", "Spring Boot", "PostgreSQL", "Docker", "Spring Security"],
+  "technologies": ["Java", "Spring Boot", "Spring Security", "Thymeleaf", "PostgreSQL", "Docker"],
   "fullDescription": {
-    "fr": "BookingRoom est une application complète de réservation de salles développée avec Spring Boot. Elle offre une authentification sécurisée, un espace administrateur, une gestion complète des réservations et une recherche avancée. Le projet utilise PostgreSQL comme base de données et Docker pour le déploiement.",
-    "en": "BookingRoom is a complete room booking application developed with Spring Boot. It offers secure authentication, an admin space, complete reservation management, and advanced search. The project uses PostgreSQL as the database and Docker for deployment."
+    "fr": "BookingRoom est une application de réservation de salles développée avec Spring Boot. Ce projet m'a permis de toucher à toute la chaîne backend : API REST, authentification avec Spring Security, base de données PostgreSQL avec JPA, rendu côté serveur avec Thymeleaf, et déploiement via Docker sur Render. C'est le projet qui m'a le plus appris sur les enjeux d'une application côté serveur — de la sécurité à la mise en production.",
+    "en": "BookingRoom is a room booking application developed with Spring Boot. This project allowed me to work through the entire backend chain: REST API, authentication with Spring Security, PostgreSQL database with JPA, server-side rendering with Thymeleaf, and deployment via Docker on Render. It's the project that taught me the most about server-side application challenges — from security to production deployment."
   },
   "features": {
     "fr": [
-      "Authentification sécurisée avec Spring Security",
-      "Espace administrateur complet",
-      "Gestion des réservations (création, modification, annulation)",
-      "Recherche avancée de salles",
-      "Dockerisation de l'application"
+      "Authentification et autorisation avec Spring Security (rôles USER/ADMIN)",
+      "CRUD complet pour les salles, utilisateurs et réservations",
+      "Espace administrateur avec tableau de bord",
+      "Recherche avancée de salles (capacité, équipements, disponibilité)",
+      "Validation des données côté serveur",
+      "Base de données PostgreSQL avec JPA/Hibernate",
+      "Dockerisation (Dockerfile + docker-compose)",
+      "Déploiement sur Render"
     ],
     "en": [
-      "Secure authentication with Spring Security",
-      "Complete admin space",
-      "Reservation management (creation, modification, cancellation)",
-      "Advanced room search",
-      "Dockerization of the application"
+      "Authentication and authorization with Spring Security (USER/ADMIN roles)",
+      "Complete CRUD for rooms, users, and reservations",
+      "Admin space with dashboard",
+      "Advanced room search (capacity, equipment, availability)",
+      "Server-side data validation",
+      "PostgreSQL database with JPA/Hibernate",
+      "Containerization (Dockerfile + docker-compose)",
+      "Deployment on Render"
     ]
   },
   "challenges": {
-    "fr": "Implémentation d'un système d'authentification robuste et gestion des conflits de réservations simultanées.",
-    "en": "Implementing a robust authentication system and handling simultaneous reservation conflicts."
-  }
+    "fr": "L'authentification avec Spring Security et la gestion des rôles a été un vrai casse-tête au début. Gérer les conflits de réservations simultanées (vérification de disponibilité, transactions) m'a forcé à comprendre les enjeux de concurrence. La Dockerisation et le déploiement sur Render m'ont initié à DevOps — un domaine que je continue d'explorer.",
+    "en": "Authentication with Spring Security and role management was a real headache at first. Handling simultaneous reservation conflicts (availability checking, transactions) forced me to understand concurrency challenges. Dockerization and deployment on Render introduced me to DevOps — a field I'm still exploring."
+  },
+  "order": 8
 }

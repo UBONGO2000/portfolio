@@ -72,7 +72,7 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
 
             {/* ----------------------------------------------- mobile menu --------------------------------------------------*/}
 
-            <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500  dark:text-white dark:bg-darHover'>
+            <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500  dark:text-white dark:bg-darkHover'>
                 
                 <IoCloseOutline className='text-4xl absolute right-6 top-6' onClick={closeMenu}/>
                 

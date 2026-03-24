@@ -16,13 +16,20 @@ describe('Projects Data', () => {
         expect(Array.isArray(project.technologies)).toBe(true);
       });
     });
+
+    it('should have unique project IDs', () => {
+      const ids = projects.map(p => p.id);
+      const uniqueIds = new Set(ids);
+      expect(uniqueIds.size).toBe(ids.length);
+    });
   });
 
   describe('getProjectById', () => {
     it('should return a project when given a valid ID', () => {
-      const project = getProjectById('covid-alert');
+      const firstProject = projects[0];
+      const project = getProjectById(firstProject.id);
       expect(project).toBeDefined();
-      expect(project.id).toBe('covid-alert');
+      expect(project.id).toBe(firstProject.id);
     });
 
     it('should return null when given an invalid ID', () => {
@@ -40,6 +47,11 @@ describe('Projects Data', () => {
         expect(id).toHaveProperty('params');
         expect(id.params).toHaveProperty('id');
       });
+    });
+
+    it('should return same number of IDs as projects', () => {
+      const ids = getAllProjectIds();
+      expect(ids.length).toBe(projects.length);
     });
   });
 });

@@ -1,31 +1,34 @@
 {
   "id": "covid-alert",
-  "title": "Covid-alert",
-  "description": "Site web sur la sensibilisation sur le COVID",
+  "title": "Covid-Alert",
+  "description": "Site de sensibilisation au COVID-19 développé avec Angular, avec tableau de bord et carte interactive",
   "image": "/covp.png",
   "github": "https://github.com/UBONGO2000/COVID-Project",
   "demo": "https://covid-project-three.vercel.app/",
-  "technologies": ["HTML", "Tailwind CSS", "Angular"],
+  "technologies": ["Angular", "TypeScript", "Tailwind CSS", "RxJS"],
   "fullDescription": {
-    "fr": "Covid-Alert est un site web de sensibilisation sur le COVID-19. Il fournit des informations actualisées sur la pandémie, les symptômes, les mesures de prévention et les ressources utiles. Le projet a été développé avec Angular pour le frontend et utilise une architecture moderne avec des composants réutilisables.",
-    "en": "Covid-Alert is a website for COVID-19 awareness. It provides updated information on the pandemic, symptoms, preventive measures, and useful resources. The project was developed with Angular for the frontend and uses a modern architecture with reusable components."
+    "fr": "Covid-Alert est un site web de sensibilisation au COVID-19 développé avec Angular. Ce projet m'a permis de découvrir un framework frontend complet et son écosystème : composants, services, routing, et gestion d'état réactive avec RxJS. Le site propose un tableau de bord avec des statistiques, des informations sur les symptômes et la prévention, ainsi qu'une carte interactive des zones à risque. C'est mon premier projet structuré avec un framework JavaScript.",
+    "en": "Covid-Alert is a COVID-19 awareness website developed with Angular. This project allowed me to discover a complete frontend framework and its ecosystem: components, services, routing, and reactive state management with RxJS. The site offers a dashboard with statistics, information on symptoms and prevention, and an interactive map of risk zones. It is my first structured project with a JavaScript framework."
   },
   "features": {
     "fr": [
       "Tableau de bord avec statistiques en temps réel",
       "Informations sur les symptômes et la prévention",
       "Carte interactive des zones à risque",
-      "Ressources et liens utiles"
+      "Architecture en composants Angular réutilisables",
+      "Routing multi-pages avec Angular Router"
     ],
     "en": [
       "Dashboard with real-time statistics",
       "Information on symptoms and prevention",
       "Interactive map of risk zones",
-      "Useful resources and links"
+      "Reusable Angular component architecture",
+      "Multi-page routing with Angular Router"
     ]
   },
   "challenges": {
-    "fr": "Gestion des données en temps réel et conception d'une interface utilisateur intuitive pour présenter des informations complexes.",
-    "en": "Managing real-time data and designing an intuitive user interface to present complex information."
-  }
+    "fr": "La découverte d'Angular a représenté un défi majeur : comprendre le cycle de vie des composants, l'injection de dépendances, les observables RxJS et le module de routing. Structurer l'application en modules fonctionnels tout en maintenant un code propre a été formateur pour mes projets suivants.",
+    "en": "Discovering Angular was a major challenge: understanding component lifecycle, dependency injection, RxJS observables, and the routing module. Structuring the application into functional modules while maintaining clean code was formative for my subsequent projects."
+  },
+  "order": 5
 }

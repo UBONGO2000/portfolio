@@ -1,9 +1,10 @@
-import { Outfit,Ovo} from "next/font/google";
+import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 const outfit = Outfit({
-  subsets: ["latin"], weight: ["400","500","600","700"]
+  subsets: ["latin"], weight: ["400", "500", "600", "700"]
 });
 
 const ovo = Ovo({
@@ -17,13 +18,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className="scroll-smooth dark">
-      <body 
+    <html lang="fr" className="scroll-smooth">
+      <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden bg-white dark:bg-darkTheme dark:text-white`}
       >
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <DarkModeProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </DarkModeProvider>
       </body>
     </html>
   );
