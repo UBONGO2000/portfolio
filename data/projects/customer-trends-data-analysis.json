@@ -1,0 +1,61 @@
+{
+  "id": "customer-trends-data-analysis",
+  "title": "Customer Trends Data Analysis",
+  "category": "data",
+  "description": "Projet d'analyse data sur le comportement d'achat client avec Python, SQL et Power BI.",
+  "image": "/customer-trends-data-analysis.png",
+  "github": "https://github.com/UBONGO2000/customer-trends-data-analysis",
+  "technologies": [
+    "Python",
+    "Pandas",
+    "SQL",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "Power BI",
+    "Jupyter Notebook",
+    "Data Visualization"
+  ],
+  "fullDescription": {
+    "fr": "Customer Trends Data Analysis est un projet d'analyse de donnees retail visant a comprendre le comportement d'achat des clients. Le travail couvre la preparation des donnees avec Python et Pandas, le chargement des donnees dans une base SQL, l'ecriture de requetes analytiques pour etudier les revenus, les remises, les segments clients, les abonnements et les produits, puis la creation d'un tableau de bord Power BI pour presenter les tendances et recommandations.",
+    "en": "Customer Trends Data Analysis is a retail data analysis project focused on understanding customer purchasing behavior. The work covers data preparation with Python and Pandas, loading data into a SQL database, writing analytical queries to study revenue, discounts, customer segments, subscriptions and products, then building a Power BI dashboard to present trends and recommendations."
+  },
+  "features": {
+    "fr": [
+      "Nettoyage et transformation d'un dataset de comportement d'achat avec Python et Pandas",
+      "Analyse exploratoire des donnees avec statistiques descriptives et controle des valeurs manquantes",
+      "Connexion a une base SQL avec SQLAlchemy et chargement des donnees preparees",
+      "Requetes SQL pour analyser revenus, remises, abonnements, segments clients et produits les mieux notes",
+      "Segmentation des clients en nouveaux, recurrents et fideles selon leurs achats precedents",
+      "Dashboard Power BI pour visualiser les tendances et aider a la decision business",
+      "Rapport et presentation des conclusions et recommandations"
+    ],
+    "en": [
+      "Cleaning and transforming a customer shopping behavior dataset with Python and Pandas",
+      "Exploratory data analysis with descriptive statistics and missing-value checks",
+      "Connecting to a SQL database with SQLAlchemy and loading prepared data",
+      "SQL queries to analyze revenue, discounts, subscriptions, customer segments and top-rated products",
+      "Customer segmentation into new, returning and loyal customers based on previous purchases",
+      "Power BI dashboard to visualize trends and support business decisions",
+      "Report and presentation of findings and recommendations"
+    ]
+  },
+  "learnings": {
+    "fr": [
+      "Nettoyer et preparer un dataset retail avec Pandas avant l'analyse",
+      "Transformer une question business en requetes SQL exploitables",
+      "Segmenter des clients selon leur comportement d'achat et leur fidelite",
+      "Construire un dashboard Power BI pour communiquer des tendances et recommandations data"
+    ],
+    "en": [
+      "Clean and prepare a retail dataset with Pandas before analysis",
+      "Turn a business question into actionable SQL queries",
+      "Segment customers based on purchasing behavior and loyalty",
+      "Build a Power BI dashboard to communicate data trends and recommendations"
+    ]
+  },
+  "challenges": {
+    "fr": "Le principal defi de ce projet a ete de relier toute la chaine data : comprendre le probleme commercial, nettoyer les donnees dans Python, structurer les donnees pour SQL, ecrire des requetes orientees decision, puis traduire les resultats en visualisations Power BI lisibles pour des parties prenantes non techniques.",
+    "en": "The main challenge was connecting the full data workflow: understanding the business problem, cleaning the data in Python, structuring it for SQL, writing decision-oriented queries, then translating the results into clear Power BI visuals for non-technical stakeholders."
+  },
+  "order": 8
+}

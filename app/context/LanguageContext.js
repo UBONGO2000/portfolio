@@ -40,6 +40,10 @@ export const translations = {
       github: 'GitHub',
       details: 'Détails',
     },
+    learn: {
+      title: 'Ce que j\'ai appris',
+      description: 'Au cours de mes projets, j\'ai acquis des compétences techniques et transversales qui vont au-delà de la simple programmation.',
+    },
     contact: {
       title: 'Contactez-moi',
       subtitle: 'Restons en contact',
@@ -55,6 +59,7 @@ export const translations = {
       rights: 'Tous droits réservés.',
       github: 'GitHub',
       linkedin: 'LinkedIn',
+      legal: 'Mentions légales',
     },
   },
   en: {
@@ -92,6 +97,10 @@ export const translations = {
       viewProject: 'View Project',
       github: 'GitHub',
       details: 'Details',
+    },
+    learn: {
+      title: 'What I\'ve Learned',
+      description: 'Through my projects, I\'ve gained technical and transferable skills that go beyond simple programming.',
     },
     contact: {
       title: 'Get in touch',

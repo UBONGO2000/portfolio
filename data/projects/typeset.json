@@ -2,7 +2,7 @@
   "id": "TYPESET",
   "title": "TYPESET",
   "description": "Magazine éditorial en ligne construit uniquement en HTML/CSS/JS vanilla avec les standards web modernes",
-  "image": "/typeset.png",
+  "image": "/typeset.jpg",
   "github": "https://github.com/UBONGO2000/TYPESET",
   "demo": "https://typeset-beta.vercel.app/",
   "technologies": ["HTML", "CSS", "JavaScript"],

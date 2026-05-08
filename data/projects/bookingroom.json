@@ -2,7 +2,7 @@
   "id": "bookingroom",
   "title": "BookingRoom",
   "description": "Application de réservation de salles avec Spring Boot, authentification et déploiement Docker",
-  "image": "/bookingroom.png",
+  "image": "/bookingroom.jpg",
   "github": "https://github.com/UBONGO2000/BookingRoom/",
   "demo": "https://bookingroom-qv0y.onrender.com/",
   "technologies": ["Java", "Spring Boot", "Spring Security", "Thymeleaf", "PostgreSQL", "Docker"],

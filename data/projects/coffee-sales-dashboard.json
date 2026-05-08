@@ -1,0 +1,61 @@
+{
+  "id": "coffee-sales-dashboard",
+  "title": "Coffee Sales Dashboard",
+  "category": "data",
+  "description": "Dashboard Excel d'analyse des ventes de cafe a partir d'un dataset de commandes, clients et produits.",
+  "image": "/coffee-sales-dashboard.png",
+  "github": "https://github.com/UBONGO2000/coffee-dashboard",
+  "link": "/coffee-orders-dashboard.xlsx",
+  "technologies": [
+    "Excel",
+    "XLOOKUP",
+    "INDEX MATCH",
+    "Pivot Tables",
+    "Charts",
+    "Data Cleaning",
+    "Dashboard"
+  ],
+  "fullDescription": {
+    "fr": "Coffee Sales Dashboard est un projet d'analyse de donnees realise dans Excel a partir d'un dataset de commandes de cafe. Le classeur combine les tables orders, customers et products, enrichit les commandes avec des formules de recherche, calcule les ventes, puis construit des vues de synthese pour analyser les ventes par type de cafe, par pays et par client.",
+    "en": "Coffee Sales Dashboard is a data analysis project built in Excel from a coffee orders dataset. The workbook combines orders, customers and products tables, enriches orders with lookup formulas, calculates sales, then builds summary views to analyze sales by coffee type, country and customer."
+  },
+  "features": {
+    "fr": [
+      "Enrichissement de la table orders avec les informations clients et produits",
+      "Utilisation de XLOOKUP et INDEX/MATCH pour croiser plusieurs feuilles Excel",
+      "Calcul automatique du chiffre d'affaires par commande",
+      "Normalisation des libelles de types de cafe et de torrefaction",
+      "Analyse des ventes par mois, annee et type de cafe",
+      "Visualisation des ventes par pays et top clients",
+      "Creation d'un dashboard Excel synthetique et exploitable"
+    ],
+    "en": [
+      "Enriching the orders table with customer and product information",
+      "Using XLOOKUP and INDEX/MATCH to combine multiple Excel sheets",
+      "Automatic sales calculation for each order",
+      "Normalizing coffee type and roast type labels",
+      "Analyzing sales by month, year and coffee type",
+      "Visualizing sales by country and top customers",
+      "Creating a clear and usable Excel dashboard"
+    ]
+  },
+  "learnings": {
+    "fr": [
+      "Croiser plusieurs feuilles Excel avec XLOOKUP et INDEX/MATCH",
+      "Construire des tableaux croises et graphiques pour analyser des ventes",
+      "Transformer un dataset brut en dashboard lisible pour la decision",
+      "Mettre en valeur les ventes par pays, client et type de produit dans Excel"
+    ],
+    "en": [
+      "Combine multiple Excel sheets with XLOOKUP and INDEX/MATCH",
+      "Build pivot tables and charts to analyze sales",
+      "Turn a raw dataset into a readable decision-making dashboard",
+      "Highlight sales by country, customer and product type in Excel"
+    ]
+  },
+  "challenges": {
+    "fr": "Le principal defi a ete de transformer un dataset de commandes brut en un classeur exploitable : relier les tables clients et produits aux commandes, fiabiliser les libelles, calculer les ventes, puis organiser les resultats dans des tableaux et graphiques clairs pour obtenir une lecture rapide des performances commerciales.",
+    "en": "The main challenge was turning a raw orders dataset into a usable workbook: connecting customer and product tables to orders, making labels reliable, calculating sales, then organizing the results into clear tables and charts for quick business performance reading."
+  },
+  "order": 9
+}

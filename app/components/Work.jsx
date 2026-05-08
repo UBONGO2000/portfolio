@@ -11,6 +11,8 @@ import { motion } from 'framer-motion';
  */
 const Work = ({ projects = [] }) => {
   const { language, t } = useLanguage();
+  const dataProjects = projects.filter((project) => project.category === 'data');
+  const appProjects = projects.filter((project) => project.category !== 'data');
 
   // Animation variants for section
   const sectionVariants = {
@@ -63,16 +65,57 @@ const Work = ({ projects = [] }) => {
         {t.work?.description || (language === 'fr' ? 'Découvrez mes projets récents' : 'Discover my recent projects')}
       </motion.p>
 
-      {/* Projects Grid */}
       {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id || index}
-              project={project}
-              index={index}
-            />
-          ))}
+        <div className="space-y-16 my-10">
+          {appProjects.length > 0 && (
+            <div>
+              <div className="mb-8 flex flex-col gap-2 border-l-4 border-gray-900 pl-5 dark:border-white">
+                <h3 className="text-2xl font-bold font-Outfit text-gray-900 dark:text-white">
+                  {language === 'fr' ? 'Projets web & applicatifs' : 'Web & App Projects'}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {language === 'fr'
+                    ? 'Interfaces, applications frontend/backend et projets fullstack.'
+                    : 'Interfaces, frontend/backend apps and fullstack projects.'}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {appProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.id || index}
+                    project={project}
+                    index={index}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {dataProjects.length > 0 && (
+            <div className="rounded-lg border-2 border-gray-900 bg-gray-50 p-5 sm:p-8 dark:border-white dark:bg-darkTheme/70">
+              <div className="mb-8 flex flex-col gap-2 border-l-4 border-gray-900 pl-5 dark:border-white">
+                <h3 className="text-2xl font-bold font-Outfit text-gray-900 dark:text-white">
+                  {language === 'fr' ? 'Projets data & analyse' : 'Data & Analytics Projects'}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {language === 'fr'
+                    ? 'Analyse de donnees, dashboards, SQL, Excel, Power BI et reporting.'
+                    : 'Data analysis, dashboards, SQL, Excel, Power BI and reporting.'}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {dataProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.id || index}
+                    project={project}
+                    index={index}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ) : (
         <div className="text-center py-20">

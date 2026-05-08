@@ -2,7 +2,7 @@
   "id": "blog-landingpage",
   "title": "Blog-Landingpage",
   "description": "Page d'atterrissage pour blog avec système de filtrage et tri d'articles en temps réel",
-  "image": "/blog.png",
+  "image": "/blog.jpg",
   "github": "https://github.com/UBONGO2000/Blog",
   "demo": "https://blog-ten-plum-60.vercel.app/",
   "technologies": ["HTML", "Tailwind CSS", "JavaScript"],

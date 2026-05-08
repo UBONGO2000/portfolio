@@ -2,7 +2,7 @@
   "id": "flexneat",
   "title": "FlexNeat",
   "description": "Application de recherche de films et séries avec l'API TVMaze, développée en jQuery",
-  "image": "/flex.png",
+  "image": "/flex.jpg",
   "github": "https://github.com/UBONGO2000/flexneat",
   "demo": "https://flexneat.vercel.app/",
   "technologies": ["HTML", "CSS", "jQuery", "API REST"],

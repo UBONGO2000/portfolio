@@ -30,10 +30,20 @@ export const DarkModeProvider = ({ children }) => {
   }, [isDarkMode]);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScroll(window.scrollY > 10);
+      if (ticking) return;
+
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        setIsScroll(window.scrollY > 10);
+        ticking = false;
+      });
     };
-    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt, FaInfoCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
@@ -55,11 +56,15 @@ const ProjectCard = ({ project, index = 0 }) => {
     >
       {/* Project Image - Link to detail */}
       <Link href={`/projects/${project.id}`} className="block overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+        <div className="relative w-full h-48">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
       </Link>
 
       {/* Project Content */}

@@ -23,14 +23,26 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
   return (
     <>
         <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
-            <Image src={assets.header_bg_color} alt='header background blur color' className='w-full'/>
+            <Image
+                src={assets.header_bg_color}
+                alt=''
+                aria-hidden="true"
+                className='w-full'
+                sizes="90vw"
+            />
         </div>
         <nav className={`w-full fixed gap-6 px-5 py-2 lg:px-8 xl:px-[8%] flex items-center justify-between z-50  ${isScroll ? "bg-white/50 backdrop-blur-lg dark:bg-darkTheme/70 dark:backdrop-blur-lg" : ""}`} >
         
             <div className='w-40'>
 
                 <a href="#top">
-                    <Image src={isDarkMode? assets.logo_dark : assets.logo} alt="firstname logo" className='w-28 cursor-pointer mr-14'/>
+                    <Image
+                        src={isDarkMode? assets.logo_dark : assets.logo}
+                        alt="firstname logo"
+                        className='w-28 cursor-pointer mr-14'
+                        priority
+                        sizes="112px"
+                    />
                 </a>
                 
             </div>

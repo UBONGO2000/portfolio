@@ -1,0 +1,26 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F7F7F7"/>
+  <rect x="58" y="54" width="1084" height="612" rx="28" fill="#11001F"/>
+  <rect x="98" y="98" width="1004" height="96" rx="18" fill="#FFFFFF"/>
+  <text x="132" y="158" fill="#11001F" font-family="Arial, sans-serif" font-size="36" font-weight="700">Coffee Sales Dashboard</text>
+  <rect x="98" y="238" width="300" height="162" rx="18" fill="#FFFFFF"/>
+  <rect x="450" y="238" width="300" height="162" rx="18" fill="#FFFFFF"/>
+  <rect x="802" y="238" width="300" height="162" rx="18" fill="#FFFFFF"/>
+  <text x="128" y="286" fill="#11001F" font-family="Arial, sans-serif" font-size="22" font-weight="700">Total Sales</text>
+  <text x="480" y="286" fill="#11001F" font-family="Arial, sans-serif" font-size="22" font-weight="700">Top Countries</text>
+  <text x="832" y="286" fill="#11001F" font-family="Arial, sans-serif" font-size="22" font-weight="700">Top Customers</text>
+  <rect x="128" y="326" width="52" height="42" rx="6" fill="#111827"/>
+  <rect x="192" y="308" width="52" height="60" rx="6" fill="#111827"/>
+  <rect x="256" y="338" width="52" height="30" rx="6" fill="#111827"/>
+  <rect x="320" y="292" width="52" height="76" rx="6" fill="#111827"/>
+  <rect x="480" y="326" width="218" height="16" rx="8" fill="#111827"/>
+  <rect x="480" y="356" width="168" height="16" rx="8" fill="#4B5563"/>
+  <rect x="480" y="386" width="112" height="16" rx="8" fill="#6B7280"/>
+  <circle cx="850" cy="336" r="12" fill="#111827"/>
+  <rect x="878" y="326" width="162" height="18" rx="9" fill="#111827"/>
+  <circle cx="850" cy="376" r="12" fill="#4B5563"/>
+  <rect x="878" y="366" width="134" height="18" rx="9" fill="#4B5563"/>
+  <rect x="98" y="448" width="1004" height="154" rx="18" fill="#FFFFFF"/>
+  <polyline points="138,558 248,528 358,548 468,498 578,516 688,474 798,504 908,462 1062,486" stroke="#11001F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="132" y="638" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Excel - XLOOKUP - Pivot Tables - Charts - Interactive dashboard</text>
+</svg>

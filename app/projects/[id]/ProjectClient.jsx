@@ -1,9 +1,10 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { useDarkMode } from '@/app/context/DarkModeContext';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCheck, FaPlay } from 'react-icons/fa';
-import Link from 'next/link';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import { motion } from 'framer-motion';
@@ -81,11 +82,14 @@ export default function ProjectClient({ project, projectId }) {
           </motion.div>
 
           {/* Project Image */}
-          <motion.div variants={itemVariants} className="rounded-lg overflow-hidden shadow-lg mb-8">
-            <img
+          <motion.div variants={itemVariants} className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-8">
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-auto"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 896px"
+              priority
             />
           </motion.div>
 
@@ -181,7 +185,7 @@ export default function ProjectClient({ project, projectId }) {
         </div>
       </motion.div>
 
-      <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
+      <Footer />
     </>
   );
 }

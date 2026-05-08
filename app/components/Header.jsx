@@ -57,6 +57,8 @@ const Header = () => {
             src={assets.my} 
             alt="my picture" 
             className='rounded-full w-32'
+            priority
+            sizes="128px"
           />
         </motion.div>
 

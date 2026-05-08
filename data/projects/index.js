@@ -12,6 +12,8 @@ import virtualg from './virtualg.json';
 import finova from './finova.json';
 import bookingroom from './bookingroom.json';
 import supplychain from './supplychain.json';
+import customerTrendsDataAnalysis from './customer-trends-data-analysis.json';
+import coffeeSalesDashboard from './coffee-sales-dashboard.json';
 
 export const projects = [
   blogLandingpage,
@@ -21,6 +23,8 @@ export const projects = [
   virtualg,
   finova,
   supplychain,
+  customerTrendsDataAnalysis,
+  coffeeSalesDashboard,
   bookingroom,
 ];
 

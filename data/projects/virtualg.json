@@ -2,7 +2,7 @@
   "id": "virtualg",
   "title": "VirtualG",
   "description": "Plateforme fictive de virtualisation avec interface moderne construite en React et Tailwind CSS",
-  "image": "/virtualG.png",
+  "image": "/virtualG.jpg",
   "github": "https://github.com/UBONGO2000/VIRTUALG",
   "demo": "https://virtualg.vercel.app/",
   "technologies": ["React", "JavaScript", "Tailwind CSS", "Lucide React"],

@@ -2,7 +2,7 @@
   "id": "finova",
   "title": "Finova",
   "description": "Dashboard financier personnel en JavaScript vanilla, avec appel d'APIs et graphiques Canvas",
-  "image": "/finova.png",
+  "image": "/finova.jpg",
   "github": "https://github.com/UBONGO2000/FINOVA",
   "demo": "https://finova-orpin-six.vercel.app/",
   "technologies": ["HTML", "CSS", "JavaScript", "ES Modules", "Canvas API", "REST APIs"],

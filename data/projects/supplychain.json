@@ -2,7 +2,7 @@
   "id": "supplychain",
   "title": "Supplychain",
   "description": "API REST complète pour la gestion de la chaîne d'approvisionnement",
-  "image": "/supplychain.png",
+  "image": "/supplychain.jpg",
   "github": "https://github.com/UBONGO2000/SupplyChain",
   "demo": "https://supplychain-39y0.onrender.com/docs",
   "technologies": ["python", "fastApi", "API rest", "mysql","authentification"],
