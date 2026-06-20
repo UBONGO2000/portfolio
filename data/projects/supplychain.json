@@ -1,7 +1,10 @@
 {
   "id": "supplychain",
   "title": "Supplychain",
-  "description": "API REST complète pour la gestion de la chaîne d'approvisionnement",
+  "description": {
+    "fr": "API REST complète pour la gestion de la chaîne d'approvisionnement",
+    "en": "Complete REST API for supply chain management."
+  },
   "image": "/supplychain.jpg",
   "github": "https://github.com/UBONGO2000/SupplyChain",
   "demo": "https://supplychain-39y0.onrender.com/docs",

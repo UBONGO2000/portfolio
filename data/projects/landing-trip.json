@@ -1,7 +1,10 @@
 {
   "id": "landing-trip",
   "title": "Landing-Trip",
-  "description": "Landing page responsive pour un site de voyage, en HTML et Tailwind CSS",
+  "description": {
+    "fr": "Landing page responsive pour un site de voyage, en HTML et Tailwind CSS",
+    "en": "Responsive landing page for a travel website, built with HTML and Tailwind CSS."
+  },
   "image": "/trip.jpg",
   "github": "https://github.com/UBONGO2000/MES-PROJETS/tree/master/burgerphp",
   "demo": "https://vercel.com/ubongo2000s-projects/landing-trip",

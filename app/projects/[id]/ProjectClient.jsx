@@ -32,7 +32,10 @@ export default function ProjectClient({ project, projectId }) {
     );
   }
 
-  const description = project.fullDescription?.[language] || project.description;
+  const shortDescription = typeof project.description === 'object'
+    ? project.description?.[language] || project.description?.fr || project.description?.en
+    : project.description;
+  const description = project.fullDescription?.[language] || shortDescription;
   const features = project.features?.[language] || [];
   const challenge = project.challenges?.[language] || '';
 
@@ -78,7 +81,7 @@ export default function ProjectClient({ project, projectId }) {
           {/* Project Header */}
           <motion.div variants={itemVariants} className="mb-8">
             <h1 className="text-4xl md:text-5xl font-Ovo font-bold mb-4">{project.title}</h1>
-            <p className="text-gray-600 dark:text-gray-300 text-lg">{project.description}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">{shortDescription}</p>
           </motion.div>
 
           {/* Project Image */}

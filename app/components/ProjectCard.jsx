@@ -15,6 +15,9 @@ import { useLanguage } from '../context/LanguageContext';
  */
 const ProjectCard = ({ project, index = 0 }) => {
   const { language, t } = useLanguage();
+  const description = typeof project.description === 'object'
+    ? project.description?.[language] || project.description?.fr || project.description?.en
+    : project.description;
 
   // Handle GitHub click
   const handleGithubClick = (e, url) => {
@@ -76,7 +79,7 @@ const ProjectCard = ({ project, index = 0 }) => {
         </Link>
 
         <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
-          {project.description}
+          {description}
         </p>
 
         {/* Technologies */}

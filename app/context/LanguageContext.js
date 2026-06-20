@@ -14,14 +14,14 @@ export const translations = {
     },
     header: {
       role: 'étudiant développeur web/mobile',
-      description: "Étudiant en <b>Bachelor Développeur Web & Mobile</b> à l'IPI Toulouse, je recherche une <b>alternance ou un stage (2 à 6 mois)</b> en développement web/mobile pour approfondir mes compétences sur le terrain. Rythme proposé : <b>3 semaines en entreprise</b> / 1 semaine en école. Disponible sur <b>Toulouse, Paris, Lyon, Lille, Lannion</b>.",
+      description: "Étudiant en <b>Bachelor Développeur Web & Mobile</b> à l'IPI Toulouse, je recherche une <b>alternance de 1 à 2 ans</b> en développement logiciel pour approfondir mes compétences suivant le rythme de <b>3 semaines en entreprise</b> et 1 semaine en école. Je suis mobile sur <b>Toulouse, Paris, Lyon, Lille, Lannion et leurs environs</b>.",
       contactMe: 'Me contacter',
       myResume: 'Mon CV',
     },
     about: {
       title: 'À propos de moi',
       introduction: 'Introduction',
-      description: "Curieux du développement web et logiciel, j'apprends en construisant des projets concrets : des pages web en HTML/CSS, des interfaces avec React, et des API backend en Spring Boot. Mon parcours en mathématiques à l'Université de Yaoundé 1 m'apporte une approche logique face aux problèmes, que je complète chaque jour à l'IPI.",
+      description: "Curieux de tout ce qui touche à l'informatique, j'aime comprendre comment les outils numériques sont conçus et comment ils peuvent répondre à des besoins concrets. Je suis particulièrement passionné par le développement logiciel, du frontend au backend, et mon parcours en mathématiques nourrit mon goût pour la logique, l'analyse et la résolution de problèmes. Cette affinité m'amène aussi à m'intéresser aux métiers de la data, où programmation, raisonnement et interprétation des données se rejoignent.",
       technologies: 'TECHNOLOGIES',
       tools: 'OUTILS & LOGICIELS',
       education: 'FORMATIONS',
@@ -72,14 +72,14 @@ export const translations = {
     },
     header: {
       role: 'web/mobile developer student',
-      description: "Studying <b>Web & Mobile Development</b> at IPI Toulouse, I'm looking for a <b>work-study placement or internship (2-6 months)</b> in web/mobile development to grow my skills in a real-world setting. Schedule: <b>3 weeks at work</b> / 1 week at school. Available in <b>Toulouse, Paris, Lyon, Lille, Lannion</b>.",
+      description: "Studying <b>Web & Mobile Development</b> at IPI Toulouse, I'm looking for a <b>1 to 2-year work-study placement</b> in software development to deepen my skills on a schedule of <b>3 weeks in a company</b> and 1 week at school. I am mobile across <b>Toulouse, Paris, Lyon, Lille, Lannion and their surrounding areas</b>.",
       contactMe: 'Contact me',
       myResume: 'My resume',
     },
     about: {
       title: 'About me',
       introduction: 'Introduction',
-      description: "Curious about web and software development, I learn by building real projects: HTML/CSS web pages, interfaces with React, and backend APIs with Spring Boot. My mathematics background at the University of Yaoundé 1 gives me a logical approach to problems, which I keep developing every day at IPI.",
+      description: "Curious about everything related to computer science, I enjoy understanding how digital tools are designed and how they can solve real needs. I am especially passionate about software development, from frontend to backend, and my mathematics background strengthens my taste for logic, analysis and problem solving. This also leads me to take an interest in data-related roles, where programming, reasoning and data interpretation come together.",
       technologies: 'TECHNOLOGIES',
       tools: 'TOOLS & SOFTWARE',
       education: 'EDUCATION',

@@ -1,7 +1,10 @@
 {
   "id": "TYPESET",
   "title": "TYPESET",
-  "description": "Magazine éditorial en ligne construit uniquement en HTML/CSS/JS vanilla avec les standards web modernes",
+  "description": {
+    "fr": "Magazine éditorial en ligne construit uniquement en HTML/CSS/JS vanilla avec les standards web modernes",
+    "en": "Online editorial magazine built only with HTML, CSS and vanilla JavaScript using modern web standards."
+  },
   "image": "/typeset.jpg",
   "github": "https://github.com/UBONGO2000/TYPESET",
   "demo": "https://typeset-beta.vercel.app/",

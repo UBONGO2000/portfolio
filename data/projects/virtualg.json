@@ -1,7 +1,10 @@
 {
   "id": "virtualg",
   "title": "VirtualG",
-  "description": "Plateforme fictive de virtualisation avec interface moderne construite en React et Tailwind CSS",
+  "description": {
+    "fr": "Plateforme fictive de virtualisation avec interface moderne construite en React et Tailwind CSS",
+    "en": "Fictional virtualization platform with a modern interface built in React and Tailwind CSS."
+  },
   "image": "/virtualG.jpg",
   "github": "https://github.com/UBONGO2000/VIRTUALG",
   "demo": "https://virtualg.vercel.app/",

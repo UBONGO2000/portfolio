@@ -1,7 +1,10 @@
 {
   "id": "covid-alert",
   "title": "Covid-Alert",
-  "description": "Site de sensibilisation au COVID-19 développé avec Angular, avec tableau de bord et carte interactive",
+  "description": {
+    "fr": "Site de sensibilisation au COVID-19 développé avec Angular, avec tableau de bord et carte interactive",
+    "en": "COVID-19 awareness website built with Angular, featuring a dashboard and interactive map."
+  },
   "image": "/covp.jpg",
   "github": "https://github.com/UBONGO2000/COVID-Project",
   "demo": "https://covid-project-three.vercel.app/",

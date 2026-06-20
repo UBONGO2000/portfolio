@@ -1,7 +1,10 @@
 {
   "id": "mon-nouveau-projet",
   "title": "Mon Nouveau Projet",
-  "description": "Une courte description du projet",
+  "description": {
+    "fr": "Une courte description du projet",
+    "en": "A short project description"
+  },
   "image": "/nom-de-limage.png",
   "github": "https://github.com/votre-username/votre-repo",
   "demo": "https://votre-demo.vercel.app/",

@@ -1,7 +1,10 @@
 {
   "id": "Prompt-hub",
   "title": "Prompt Hub",
-  "description": "Application de partage et de découverte de prompts IA",
+  "description": {
+    "fr": "Application de partage et de découverte de prompts IA",
+    "en": "Application for sharing and discovering AI prompts."
+  },
   "image": "/prompt-hub.jpg",
   "github": "https://github.com/UBONGO2000/prompt-hub-frontend",
   "demo": "https://prompt-hub-frontend-dun.vercel.app/prompts",

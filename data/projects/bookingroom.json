@@ -1,7 +1,10 @@
 {
   "id": "bookingroom",
   "title": "BookingRoom",
-  "description": "Application de réservation de salles avec Spring Boot, authentification et déploiement Docker",
+  "description": {
+    "fr": "Application de réservation de salles avec Spring Boot, authentification et déploiement Docker",
+    "en": "Room booking application with Spring Boot, authentication and Docker deployment."
+  },
   "image": "/bookingroom.jpg",
   "github": "https://github.com/UBONGO2000/BookingRoom/",
   "demo": "https://bookingroom-qv0y.onrender.com/",

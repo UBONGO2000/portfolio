@@ -2,7 +2,10 @@
   "id": "coffee-sales-dashboard",
   "title": "Coffee Sales Dashboard",
   "category": "data",
-  "description": "Dashboard Excel d'analyse des ventes de cafe a partir d'un dataset de commandes, clients et produits.",
+  "description": {
+    "fr": "Dashboard Excel d'analyse des ventes de cafe a partir d'un dataset de commandes, clients et produits.",
+    "en": "Excel sales analysis dashboard built from an orders, customers and products dataset."
+  },
   "image": "/coffee-sales-dashboard.png",
   "github": "https://github.com/UBONGO2000/coffee-dashboard",
   "link": "/coffee-orders-dashboard.xlsx",

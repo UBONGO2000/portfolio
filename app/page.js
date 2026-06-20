@@ -6,7 +6,6 @@ import { useDarkMode } from "./context/DarkModeContext";
 import { projects } from "@/data/projects";
 
 const About = dynamic(() => import("./components/About"));
-const Learn = dynamic(() => import("./components/Learn"));
 const Work = dynamic(() => import("./components/Work"));
 const Social = dynamic(() => import("./components/Social"));
 const Contact = dynamic(() => import("./components/Contact"));
@@ -20,7 +19,6 @@ export default function Home() {
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
       <Header />
       <About isDarkMode={isDarkMode} />
-      <Learn projects={projects} />
       <Social />
       <Work projects={projects} />
       <Contact isDarkMode={isDarkMode} />

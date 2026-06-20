@@ -1,7 +1,10 @@
 {
   "id": "finova",
   "title": "Finova",
-  "description": "Dashboard financier personnel en JavaScript vanilla, avec appel d'APIs et graphiques Canvas",
+  "description": {
+    "fr": "Dashboard financier personnel en JavaScript vanilla, avec appel d'APIs et graphiques Canvas",
+    "en": "Personal finance dashboard in vanilla JavaScript, with API calls and Canvas charts."
+  },
   "image": "/finova.jpg",
   "github": "https://github.com/UBONGO2000/FINOVA",
   "demo": "https://finova-orpin-six.vercel.app/",
