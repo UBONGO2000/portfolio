@@ -14,8 +14,10 @@ import bookingroom from './bookingroom.json';
 import supplychain from './supplychain.json';
 import customerTrendsDataAnalysis from './customer-trends-data-analysis.json';
 import coffeeSalesDashboard from './coffee-sales-dashboard.json';
+import covidAlert from './covid-alert.json';
 
 export const projects = [
+  landingTrip,
   blogLandingpage,
   typeset,
   flexneat,
@@ -26,6 +28,7 @@ export const projects = [
   customerTrendsDataAnalysis,
   coffeeSalesDashboard,
   bookingroom,
+  covidAlert,
 ];
 
 export const getProjectById = (id) => {
