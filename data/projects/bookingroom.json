@@ -39,5 +39,6 @@
     "fr": "L'authentification avec Spring Security et la gestion des rôles a été un vrai casse-tête au début. Gérer les conflits de réservations simultanées (vérification de disponibilité, transactions) m'a forcé à comprendre les enjeux de concurrence. La Dockerisation et le déploiement sur Render m'ont initié à DevOps — un domaine que je continue d'explorer.",
     "en": "Authentication with Spring Security and role management was a real headache at first. Handling simultaneous reservation conflicts (availability checking, transactions) forced me to understand concurrency challenges. Dockerization and deployment on Render introduced me to DevOps — a field I'm still exploring."
   },
-  "order": 8
+  "order": 2,
+  "tier": "primary"
 }

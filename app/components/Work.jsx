@@ -1,18 +1,37 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import ProjectCard from './ProjectCard';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { IoChevronDown } from 'react-icons/io5';
+
+const byOrder = (a, b) => (a.order ?? 0) - (b.order ?? 0);
 
 /**
  * Work - Component displaying the portfolio projects section
- * Uses dynamic project data loaded at build time
+ * Uses dynamic project data loaded at build time, grouped by `tier`:
+ * primary/secondary projects in the main grid, data projects in their
+ * own subsection, and early learning projects in a collapsed block.
  */
 const Work = ({ projects = [] }) => {
   const { language, t } = useLanguage();
-  const dataProjects = projects.filter((project) => project.category === 'data');
-  const appProjects = projects.filter((project) => project.category !== 'data');
+  const [showLearning, setShowLearning] = useState(false);
+
+  const mainProjects = projects
+    .filter((project) => project.tier === 'primary' || project.tier === 'secondary')
+    .sort((a, b) => {
+      if (a.tier !== b.tier) return a.tier === 'primary' ? -1 : 1;
+      return byOrder(a, b);
+    });
+
+  const dataProjects = projects
+    .filter((project) => project.tier === 'data')
+    .sort(byOrder);
+
+  const learningProjects = projects
+    .filter((project) => project.tier === 'learning')
+    .sort(byOrder);
 
   // Animation variants for section
   const sectionVariants = {
@@ -67,7 +86,7 @@ const Work = ({ projects = [] }) => {
 
       {projects.length > 0 ? (
         <div className="space-y-16 my-10">
-          {appProjects.length > 0 && (
+          {mainProjects.length > 0 && (
             <div>
               <div className="mb-8 flex flex-col gap-2 border-l-4 border-gray-900 pl-5 dark:border-white">
                 <h3 className="text-2xl font-bold font-Outfit text-gray-900 dark:text-white">
@@ -81,7 +100,7 @@ const Work = ({ projects = [] }) => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {appProjects.map((project, index) => (
+                {mainProjects.map((project, index) => (
                   <ProjectCard
                     key={project.id || index}
                     project={project}
@@ -114,6 +133,52 @@ const Work = ({ projects = [] }) => {
                   />
                 ))}
               </div>
+            </div>
+          )}
+
+          {learningProjects.length > 0 && (
+            <div>
+              <button
+                type="button"
+                onClick={() => setShowLearning((prev) => !prev)}
+                aria-expanded={showLearning}
+                className="mx-auto flex items-center gap-2 px-6 py-3 border border-gray-500 rounded-full font-Ovo hover:bg-gray-100 dark:border-white/50 dark:hover:bg-white/10 transition-colors"
+              >
+                {language === 'fr' ? 'Voir plus de projets' : 'See more projects'}
+                <IoChevronDown
+                  className={`transition-transform duration-300 ${showLearning ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {showLearning && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mt-8 mb-2 flex flex-col gap-2 border-l-4 border-gray-400 pl-5 dark:border-gray-500">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        {language === 'fr'
+                          ? "Mes premiers projets d'apprentissage HTML/CSS/JS."
+                          : 'My earliest HTML/CSS/JS learning projects.'}
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {learningProjects.map((project, index) => (
+                        <ProjectCard
+                          key={project.id || index}
+                          project={project}
+                          index={index}
+                        />
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           )}
         </div>

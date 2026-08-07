@@ -33,5 +33,6 @@
     "fr": "Ce projet m'a confronté à la gestion fine du responsive design avec Tailwind CSS, notamment pour adapter la galerie de destinations sur différentes tailles d'écran. J'ai également appris à structurer un projet CSS de manière propre et maintenable dès le départ.",
     "en": "This project confronted me with fine responsive design management with Tailwind CSS, particularly for adapting the destination gallery across different screen sizes. I also learned to structure a CSS project in a clean and maintainable way from the start."
   },
-  "order": 1
+  "order": 4,
+  "tier": "learning"
 }

@@ -20,12 +20,20 @@ describe('Projects Data', () => {
       });
     });
 
-    it('should sort projects by ascending order', () => {
-      for (let i = 1; i < projects.length; i++) {
-        const previousOrder = projects[i - 1].order ?? 0;
-        const currentOrder = projects[i].order ?? 0;
-        expect(currentOrder).toBeGreaterThanOrEqual(previousOrder);
-      }
+    it('should sort projects by ascending order within each tier', () => {
+      const byTier = {};
+      projects.forEach((project) => {
+        byTier[project.tier] = byTier[project.tier] || [];
+        byTier[project.tier].push(project);
+      });
+
+      Object.values(byTier).forEach((tierProjects) => {
+        for (let i = 1; i < tierProjects.length; i++) {
+          const previousOrder = tierProjects[i - 1].order ?? 0;
+          const currentOrder = tierProjects[i].order ?? 0;
+          expect(currentOrder).toBeGreaterThanOrEqual(previousOrder);
+        }
+      });
     });
   });
 
@@ -35,6 +43,8 @@ describe('Projects Data', () => {
     });
 
     it('should have valid project structure', () => {
+      const validTiers = ['primary', 'secondary', 'data', 'learning'];
+
       projects.forEach(project => {
         expect(project).toHaveProperty('id');
         expect(project).toHaveProperty('title');
@@ -42,6 +52,7 @@ describe('Projects Data', () => {
         expect(project).toHaveProperty('image');
         expect(project).toHaveProperty('technologies');
         expect(Array.isArray(project.technologies)).toBe(true);
+        expect(validTiers).toContain(project.tier);
       });
     });
 

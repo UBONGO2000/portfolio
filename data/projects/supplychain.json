@@ -39,5 +39,6 @@
     "fr": "Concevoir un système de réservation de stock atomique lors de la création de commandes, en garantissant l'intégrité des données sans verrouillage excessif de la base. Structurer des requêtes SQL complexes avec SQLAlchemy pour les analytiques (agrégations multi-tables, sous-requêtes de réapprovisionnement). Implémenter un contrôle d'accès granulaire à 4 niveaux sans alourdir la logique métier, et gérer la configuration CORS pour supporter à la fois le développement local et le déploiement multi-origine (Render + Vercel).",
     "en": "Designing an atomic inventory reservation system during order creation that ensures data integrity without excessive database locking. Structuring complex SQL queries with SQLAlchemy for analytics (multi-table aggregations, reorder subqueries). Implementing granular 4-level access control without bloating business logic, and managing CORS configuration to support both local development and multi-origin deployment (Render + Vercel)."
   },
-  "order": 8
+  "order": 1,
+  "tier": "primary"
 }

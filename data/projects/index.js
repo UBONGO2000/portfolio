@@ -11,7 +11,8 @@ import fs from 'fs';
 import path from 'path';
 
 const PROJECTS_DIR = path.join(process.cwd(), 'data', 'projects');
-const REQUIRED_FIELDS = ['id', 'title', 'description', 'image'];
+const REQUIRED_FIELDS = ['id', 'title', 'description', 'image', 'tier'];
+const VALID_TIERS = ['primary', 'secondary', 'data', 'learning'];
 
 function loadProjects() {
   const files = fs
@@ -30,6 +31,12 @@ function loadProjects() {
           `Invalid project file "${file}": missing required field "${field}".`
         );
       }
+    }
+
+    if (!VALID_TIERS.includes(project.tier)) {
+      throw new Error(
+        `Invalid project file "${file}": tier must be one of ${VALID_TIERS.join(', ')}, got "${project.tier}".`
+      );
     }
 
     if (seenIds.has(project.id)) {

@@ -33,5 +33,6 @@
     "fr": "La découverte d'Angular a représenté un défi majeur : comprendre le cycle de vie des composants, l'injection de dépendances, les observables RxJS et le module de routing. Structurer l'application en modules fonctionnels tout en maintenant un code propre a été formateur pour mes projets suivants.",
     "en": "Discovering Angular was a major challenge: understanding component lifecycle, dependency injection, RxJS observables, and the routing module. Structuring the application into functional modules while maintaining clean code was formative for my subsequent projects."
   },
-  "order": 5
+  "order": 2,
+  "tier": "secondary"
 }

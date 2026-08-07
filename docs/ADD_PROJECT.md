@@ -3,8 +3,9 @@
 Ce guide explique comment ajouter un nouveau projet a votre portfolio.
 
 Tous les fichiers `.json` du dossier `data/projects/` (sauf `TEMPLATE.json`)
-sont charges automatiquement au build, tries par le champ `order`. Il suffit
-de deposer le JSON et l'image, aucun autre fichier n'a besoin d'etre modifie.
+sont charges automatiquement au build, groupes par `tier` puis tries par
+`order` au sein de chaque groupe. Il suffit de deposer le JSON et l'image,
+aucun autre fichier n'a besoin d'etre modifie.
 
 ## Etape 1: Creer le fichier JSON
 
@@ -33,7 +34,8 @@ de deposer le JSON et l'image, aucun autre fichier n'a besoin d'etre modifie.
     "fr": "Description du defi releve en francais...",
     "en": "Description of challenges faced in English..."
   },
-  "order": 0
+  "order": 0,
+  "tier": "secondary"
 }
 ```
 
@@ -58,11 +60,29 @@ Placez votre image dans le dossier `public/`:
 | `fullDescription` | object | Descriptions FR/EN |
 | `features` | object | Liste fonctionnalites FR/EN |
 | `challenges` | object | Defis FR/EN |
-| `order` | number | Ordre d'affichage |
+| `order` | number | Ordre d'affichage au sein de son `tier` |
+| `tier` | string | Niveau de mise en avant sur la page d'accueil (voir ci-dessous) |
+
+## Le champ `tier`
+
+Le champ `tier` controle ou et comment le projet apparait sur la page d'accueil.
+Il est obligatoire - le build echoue avec une erreur claire si absent ou invalide.
+Valeurs possibles :
+
+| Valeur | Effet |
+| --- | --- |
+| `primary` | Projet phare, affiche en premier dans la grille principale |
+| `secondary` | Projet correct mais moins abouti, affiche apres les `primary` dans la meme grille |
+| `data` | Projet d'analyse de donnees, regroupe dans sa propre sous-section "Projets data & analyse" |
+| `learning` | Premier projet d'apprentissage (HTML/CSS/JS basique), place dans le bloc repliable "Voir plus de projets" |
+
+Dans le doute, utilisez `secondary` : c'est l'option la plus neutre pour un
+nouveau projet qui n'est ni un travail phare ni un exercice d'apprentissage
+precoce.
 
 ## Tips
 
 - Utilisez des images de meme taille pour uniformiser la grille
 - Gardez les descriptions courtes et percutantes
 - Specifiez les technologies principales
-- L'ordre d'affichage peut etre controle avec le champ `order`
+- L'ordre d'affichage au sein d'un meme `tier` peut etre controle avec le champ `order`

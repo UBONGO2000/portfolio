@@ -29,5 +29,6 @@
     "fr": "Description du défi relevé en français...",
     "en": "Description of challenges faced in English..."
   },
-  "order": 0
+  "order": 0,
+  "tier": "secondary"
 }

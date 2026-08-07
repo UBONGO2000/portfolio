@@ -33,5 +33,6 @@
     "fr": "Le principal défi a été d'implémenter un système de filtrage et de tri performant en JavaScript vanilla, sans bibliothèque externe. La gestion des transitions visuelles lors du changement de filtre, tout en maintenant la fluidité de l'interface, m'a poussé à optimiser la manipulation du DOM.",
     "en": "The main challenge was implementing an efficient filtering and sorting system in vanilla JavaScript, without external libraries. Managing visual transitions when changing filters, while maintaining interface fluidity, pushed me to optimize DOM manipulation."
   },
-  "order": 1
+  "order": 1,
+  "tier": "learning"
 }
