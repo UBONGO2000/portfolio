@@ -3,6 +3,7 @@ import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiPhp } from "react-icons/si";
+import { SiCplusplus } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
@@ -43,34 +44,55 @@ const About = () => {
                 <p className='mb-10 font-Ovo text-2xl text-center'>
                 {t.about.description}
                 </p>
-{/* technos */}
-                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.technologies}</h3>
+{/* Langages */}
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.languages}</h3>
 
-                <div className='grid sm:grid-rows-4 sm:grid-flow-col gap-4 mb-10'>
+                <div className='flex flex-wrap justify-center gap-4 mb-10'>
 
-                    
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaPython /> <span>Python</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaJava /> <span>Java</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaPython /> <span>C++</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiCplusplus /> <span>C++</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <IoLogoJavascript /> <span>Javascript</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiPhp /> <span>PHP</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <RiTailwindCssFill /> <span>Tailwind css</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaReact /> <span>React</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaAngular /> <span>Angular</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <TbSql /> <span>SQL</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiDjango /> <span>Django</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiSpring /> <span>Spring Boot</span></span>
-                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <DiMongodb /> <span>MongoDB</span></span>
-                      
 
                 </div>
 
-{/* Tools & Software */}
+{/* Backend */}
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.backend}</h3>
+
+                <div className='flex flex-wrap justify-center gap-4 mb-10'>
+
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiDjango /> <span>Django</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiSpring /> <span>Spring Boot</span></span>
+
+                </div>
+
+{/* Frontend */}
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.frontend}</h3>
+
+                <div className='flex flex-wrap justify-center gap-4 mb-10'>
+
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaReact /> <span>React</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaAngular /> <span>Angular</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <RiTailwindCssFill /> <span>Tailwind CSS</span></span>
+
+                </div>
+
+{/* Bases de donnees */}
+                <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.databases}</h3>
+
+                <div className='flex flex-wrap justify-center gap-4 mb-10'>
+
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <TbSql /> <span>SQL</span></span>
+                    <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <DiMongodb /> <span>MongoDB</span></span>
+
+                </div>
+
+{/* Outils & DevOps */}
                 <h3 className='mb-10 text-center text-2xl font-bold font-Ovo'>{t.about.tools}</h3>
 
-                <div className='grid sm:grid-rows-4 sm:grid-flow-col gap-4 mb-10'>
+                <div className='flex flex-wrap justify-center gap-4 mb-10'>
 
-                    
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <VscVscode /> <span>Vs code</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiLibreofficeimpress /> <span>Libre office</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <FaGithub /> <span>Github</span></span>
@@ -83,7 +105,6 @@ const About = () => {
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <span>Eclipse</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiPostman /> <span>Postman</span></span>
                     <span className=' flex  border-2 border-gray-800 bg-gray-800 text-slate-50 text-2xl px-5 py-3 text-center dark:bg-slate-50 dark:text-gray-800'> <SiLaragon /> <span>Laragon</span></span>
-                      
 
                 </div>
 
