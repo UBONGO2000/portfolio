@@ -67,7 +67,7 @@ const Header = () => {
           variants={itemVariants}
           className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'
         >
-          Hi I'm Georges NTCHANGA <MdWavingHand/>
+          {t.header.greeting} <MdWavingHand/>
         </motion.h3>
 
         {/* Role Title */}

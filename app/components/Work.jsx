@@ -100,7 +100,7 @@ const Work = ({ projects = [] }) => {
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   {language === 'fr'
-                    ? 'Analyse de donnees, dashboards, SQL, Excel, Power BI et reporting.'
+                    ? 'Analyse de données, dashboards, SQL, Excel, Power BI et reporting.'
                     : 'Data analysis, dashboards, SQL, Excel, Power BI and reporting.'}
                 </p>
               </div>

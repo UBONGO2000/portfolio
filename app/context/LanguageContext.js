@@ -13,7 +13,8 @@ export const translations = {
       contactMe: 'Me contacter',
     },
     header: {
-      role: 'étudiant développeur web/mobile',
+      greeting: "Bonjour, je suis Georges NTCHANGA",
+      role: 'Étudiant développeur Web & Mobile',
       description: "Étudiant en <b>Bachelor Développeur Web & Mobile</b> à l'IPI Toulouse, je recherche une <b>alternance de 1 à 2 ans</b> en développement logiciel pour approfondir mes compétences suivant le rythme de <b>3 semaines en entreprise</b> et 1 semaine en école. Je suis mobile sur <b>Toulouse, Paris, Lyon, Lille, Lannion et leurs environs</b>.",
       contactMe: 'Me contacter',
       myResume: 'Mon CV',
@@ -38,7 +39,7 @@ export const translations = {
     work: {
       title: 'Mes projets',
       subtitle: 'Portfolio',
-      description: "Des premières pages HTML/CSS aux applications backend, voici les projets qui jalonnent mon apprentissage. Chaque réalisation m'a permis de découvrir de nouvelles choses.",
+      description: "Des premières pages HTML/CSS aux applications backend, voici une sélection de projets qui jalonnent mon apprentissage, chacun m'ayant permis d'approfondir une technologie ou une problématique différente.",
       viewProject: 'Voir le projet',
       github: 'GitHub',
       details: 'Détails',
@@ -50,7 +51,7 @@ export const translations = {
     contact: {
       title: 'Contactez-moi',
       subtitle: 'Restons en contact',
-      description: "Vous avez un projet, une opportunité d'alternance ou simplement envie d'échanger ? Mon formulaire est ouvert.",
+      description: "Vous avez un projet, une opportunité d'alternance ou simplement envie d'échanger ? N'hésitez pas à m'écrire.",
       name: 'Entrez votre nom',
       email: 'Entrez votre email',
       message: 'Entrez votre message',
@@ -74,7 +75,8 @@ export const translations = {
       contactMe: 'Contact me',
     },
     header: {
-      role: 'web/mobile developer student',
+      greeting: "Hi, I'm Georges NTCHANGA",
+      role: 'Web & Mobile Developer Student',
       description: "Studying <b>Web & Mobile Development</b> at IPI Toulouse, I'm looking for a <b>1 to 2-year work-study placement</b> in software development to deepen my skills on a schedule of <b>3 weeks in a company</b> and 1 week at school. I am mobile across <b>Toulouse, Paris, Lyon, Lille, Lannion and their surrounding areas</b>.",
       contactMe: 'Contact me',
       myResume: 'My resume',
@@ -99,7 +101,7 @@ export const translations = {
     work: {
       title: 'My Projects',
       subtitle: 'My portfolio',
-      description: "From first HTML/CSS pages to backend applications, here are the projects that mark my learning path. Each one helped me discover something new.",
+      description: "From first HTML/CSS pages to backend applications, here's a selection of projects that mark my learning path, each one deepening my understanding of a different technology or challenge.",
       viewProject: 'View Project',
       github: 'GitHub',
       details: 'Details',
@@ -123,6 +125,7 @@ export const translations = {
       rights: 'All rights reserved.',
       github: 'Github',
       linkedin: 'Linkedin',
+      legal: 'Legal notice',
     },
   },
 };
