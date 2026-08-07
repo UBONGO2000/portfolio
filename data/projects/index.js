@@ -1,35 +1,16 @@
 /**
  * Projects Index
- * Ordered from frontend (HTML/CSS) → frameworks → backend
+ *
+ * `generated.json` is produced by scripts/generate-projects-index.js, which
+ * scans every *.json file in this directory (except TEMPLATE.json), validates
+ * it, and sorts it by `order`. That script runs automatically before
+ * dev/build/test (see package.json). To add a project: drop a new JSON file
+ * here (+ its image in public/) - nothing else needs to change.
  */
 
-import landingTrip from './landing-trip.json';
-import blogLandingpage from './blog-landingpage.json';
-import typeset from './typeset.json';
-import flexneat from './flexneat.json';
-import promptHub from './prompt-hub.json';
-import virtualg from './virtualg.json';
-import finova from './finova.json';
-import bookingroom from './bookingroom.json';
-import supplychain from './supplychain.json';
-import customerTrendsDataAnalysis from './customer-trends-data-analysis.json';
-import coffeeSalesDashboard from './coffee-sales-dashboard.json';
-import covidAlert from './covid-alert.json';
+import generatedProjects from './generated.json';
 
-export const projects = [
-  landingTrip,
-  blogLandingpage,
-  typeset,
-  flexneat,
-  promptHub,
-  virtualg,
-  finova,
-  supplychain,
-  customerTrendsDataAnalysis,
-  coffeeSalesDashboard,
-  bookingroom,
-  covidAlert,
-];
+export const projects = generatedProjects;
 
 export const getProjectById = (id) => {
   return projects.find(project => project.id === id) || null;

@@ -33,26 +33,23 @@ Ce guide explique comment ajouter un nouveau projet a votre portfolio.
 }
 ```
 
-## Etape 2: Mettre a jour l'index
-
-Ajoutez votre projet dans `data/projects/index.js`:
-
-```javascript
-import monNouveauProjet from './mon-nouveau-projet.json';
-
-export const projects = [
-  covidAlert,
-  landingTrip,
-  monNouveauProjet,
-];
-```
-
-## Etape 3: Ajouter l'image
+## Etape 2: Ajouter l'image
 
 Placez votre image dans le dossier `public/`:
 
 - Images de projet: `/public/mon-nouveau-projet.png`
 - Utilisez des images de taille recommandee: 800x600 pixels
+
+C'est tout : aucun autre fichier a modifier. `data/projects/index.js` charge
+automatiquement tous les fichiers `.json` de ce dossier (sauf `TEMPLATE.json`)
+au moment du build, les trie selon leur champ `order`, et les expose au site.
+Ce chargement (`scripts/generate-projects-index.js`) tourne automatiquement
+avant `npm run dev`, `npm run build` et `npm test`.
+
+Si un fichier JSON est mal forme ou qu'il manque un champ obligatoire
+(`id`, `title`, `description`, `image`) ou que deux projets partagent le
+meme `id`, la generation echoue immediatement avec un message d'erreur
+clair plutot que de casser le rendu du site en silence.
 
 ## Description des champs
 

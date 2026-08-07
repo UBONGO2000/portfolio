@@ -1,4 +1,8 @@
+import fs from 'fs';
+import path from 'path';
 import { projects, getProjectById, getAllProjectIds } from '@/data/projects';
+
+const PROJECTS_DIR = path.join(__dirname, '../../data/projects');
 
 describe('Projects Data', () => {
   describe('projects', () => {
@@ -21,6 +25,23 @@ describe('Projects Data', () => {
       const ids = projects.map(p => p.id);
       const uniqueIds = new Set(ids);
       expect(uniqueIds.size).toBe(ids.length);
+    });
+
+    it('should load every JSON file in data/projects (except TEMPLATE.json and the generated index)', () => {
+      const expectedIds = fs
+        .readdirSync(PROJECTS_DIR)
+        .filter((file) => file.endsWith('.json') && !['TEMPLATE.json', 'generated.json'].includes(file))
+        .map((file) => require(path.join(PROJECTS_DIR, file)).id);
+
+      const loadedIds = projects.map((p) => p.id);
+      expect(new Set(loadedIds)).toEqual(new Set(expectedIds));
+      expect(loadedIds.length).toBe(expectedIds.length);
+    });
+
+    it('should be sorted by ascending order', () => {
+      const orders = projects.map((p) => p.order ?? Infinity);
+      const sortedOrders = [...orders].sort((a, b) => a - b);
+      expect(orders).toEqual(sortedOrders);
     });
   });
 
