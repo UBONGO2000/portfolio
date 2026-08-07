@@ -29,6 +29,7 @@ Ce guide explique comment ajouter un nouveau projet a votre portfolio.
     "fr": "Description du defi releve en francais...",
     "en": "Description of challenges faced in English..."
   },
+  "tier": "secondary",
   "order": 0
 }
 ```
@@ -65,11 +66,29 @@ clair plutot que de casser le rendu du site en silence.
 | `fullDescription` | object | Descriptions FR/EN |
 | `features` | object | Liste fonctionnalites FR/EN |
 | `challenges` | object | Defis FR/EN |
-| `order` | number | Ordre d'affichage |
+| `tier` | string | Niveau de mise en avant sur la page d'accueil (voir ci-dessous) |
+| `order` | number | Ordre d'affichage au sein de son `tier` |
+
+## Le champ `tier`
+
+Controle ou et comment le projet apparait sur la page d'accueil (`app/components/Work.jsx`) :
+
+| Valeur | Effet |
+| --- | --- |
+| `primary` | Projet phare, affiche en premier dans la grille principale |
+| `secondary` | Projet correct mais moins abouti, affiche apres les `primary` dans la meme grille |
+| `data` | Regroupe avec les autres projets data dans la sous-section "Projets data & analyse" |
+| `learning` | Projet d'apprentissage precoce, range dans le bloc repliable "Voir plus de projets" (ferme par defaut) |
+
+Si `tier` est absent ou ne correspond a aucune de ces valeurs, le projet est
+affiche par defaut dans la grille principale (comme `secondary`) plutot que
+d'etre masque silencieusement. Sans avis contraire, utilisez `secondary` par
+defaut pour un nouveau projet - reservez `primary` aux projets que vous
+choisissez deliberement de mettre en avant.
 
 ## Tips
 
 - Utilisez des images de meme taille pour uniformiser la grille
 - Gardez les descriptions courtes et percutantes
 - Specifiez les technologies principales
-- L'ordre d'affichage peut etre controle avec le champ `order`
+- L'ordre d'affichage au sein d'un meme `tier` peut etre controle avec le champ `order`

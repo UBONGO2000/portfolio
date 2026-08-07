@@ -35,5 +35,6 @@
     "fr": "Ce projet m'a confronté à plusieurs défis techniques en utilisant uniquement les standards natifs : les Scroll-driven animations, les View Transitions et les Container Queries. J'ai appris à structurer un CSS modulaire et à gérer un thème dark/light sans flash visuel. Le filtrage dynamique et le ticker infini en vanilla JS m'ont aussi beaucoup appris.",
     "en": "This project confronted me with several technical challenges using only native standards: Scroll-driven animations, View Transitions, and Container Queries. I learned to structure modular CSS and manage a dark/light theme without visual flash. Dynamic filtering and the infinite ticker in vanilla JS also taught me a lot."
   },
-  "order": 2
+  "tier": "learning",
+  "order": 10
 }

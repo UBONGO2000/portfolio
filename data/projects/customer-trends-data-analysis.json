@@ -60,5 +60,6 @@
     "fr": "Le principal defi de ce projet a ete de relier toute la chaine data : comprendre le probleme commercial, nettoyer les donnees dans Python, structurer les donnees pour SQL, ecrire des requetes orientees decision, puis traduire les resultats en visualisations Power BI lisibles pour des parties prenantes non techniques.",
     "en": "The main challenge was connecting the full data workflow: understanding the business problem, cleaning the data in Python, structuring it for SQL, writing decision-oriented queries, then translating the results into clear Power BI visuals for non-technical stakeholders."
   },
+  "tier": "data",
   "order": 8
 }

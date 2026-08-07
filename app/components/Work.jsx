@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import ProjectCard from './ProjectCard';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 /**
  * Work - Component displaying the portfolio projects section
@@ -11,8 +11,15 @@ import { motion } from 'framer-motion';
  */
 const Work = ({ projects = [] }) => {
   const { language, t } = useLanguage();
-  const dataProjects = projects.filter((project) => project.category === 'data');
-  const appProjects = projects.filter((project) => project.category !== 'data');
+  const [showMore, setShowMore] = useState(false);
+
+  // Projects without a tier (or an unrecognized one) default to the main
+  // grid rather than being silently dropped.
+  const dataProjects = projects.filter((project) => project.tier === 'data');
+  const learningProjects = projects.filter((project) => project.tier === 'learning');
+  const appProjects = projects.filter(
+    (project) => project.tier !== 'data' && project.tier !== 'learning'
+  );
 
   // Animation variants for section
   const sectionVariants = {
@@ -114,6 +121,59 @@ const Work = ({ projects = [] }) => {
                   />
                 ))}
               </div>
+            </div>
+          )}
+
+          {learningProjects.length > 0 && (
+            <div>
+              <div className="flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => setShowMore((prev) => !prev)}
+                  aria-expanded={showMore}
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-900 dark:border-white rounded-full font-Outfit font-medium hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors"
+                >
+                  {showMore
+                    ? (language === 'fr' ? 'Masquer ces projets' : 'Hide these projects')
+                    : (language === 'fr' ? 'Voir plus de projets' : 'See more projects')}
+                  <span className={`inline-block transition-transform ${showMore ? 'rotate-180' : ''}`}>
+                    ↓
+                  </span>
+                </button>
+              </div>
+
+              <AnimatePresence>
+                {showMore && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mb-8 mt-10 flex flex-col gap-2 border-l-4 border-gray-400 pl-5 dark:border-gray-500">
+                      <h3 className="text-xl font-bold font-Outfit text-gray-700 dark:text-gray-300">
+                        {language === 'fr' ? "Premiers projets d'apprentissage" : 'Early learning projects'}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {language === 'fr'
+                          ? 'Des projets HTML/CSS/JS plus anciens qui montrent ma progression.'
+                          : 'Earlier HTML/CSS/JS projects that show my progression.'}
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                      {learningProjects.map((project, index) => (
+                        <ProjectCard
+                          key={project.id || index}
+                          project={project}
+                          index={index}
+                        />
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           )}
         </div>

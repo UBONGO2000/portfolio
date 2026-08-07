@@ -43,6 +43,22 @@ describe('Projects Data', () => {
       const sortedOrders = [...orders].sort((a, b) => a - b);
       expect(orders).toEqual(sortedOrders);
     });
+
+    it('should only use recognized tier values', () => {
+      const VALID_TIERS = ['primary', 'secondary', 'data', 'learning'];
+      projects.forEach((project) => {
+        if (project.tier !== undefined) {
+          expect(VALID_TIERS).toContain(project.tier);
+        }
+      });
+    });
+
+    it('should rank the primary tier as supplychain, bookingroom, finova, prompt-hub', () => {
+      const primaryIds = projects
+        .filter((p) => p.tier === 'primary')
+        .map((p) => p.id);
+      expect(primaryIds).toEqual(['supplychain', 'bookingroom', 'finova', 'Prompt-hub']);
+    });
   });
 
   describe('getProjectById', () => {
