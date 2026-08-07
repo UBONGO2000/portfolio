@@ -1,35 +1,51 @@
 /**
  * Projects Index
- * Ordered from frontend (HTML/CSS) → frameworks → backend
+ *
+ * Automatically loads every project JSON file in this directory (except
+ * TEMPLATE.json) at build time and exposes it as `projects`, sorted by the
+ * `order` field. To add a project, just drop a JSON file here - no other
+ * file needs to change.
  */
 
-import landingTrip from './landing-trip.json';
-import blogLandingpage from './blog-landingpage.json';
-import typeset from './typeset.json';
-import flexneat from './flexneat.json';
-import promptHub from './prompt-hub.json';
-import virtualg from './virtualg.json';
-import finova from './finova.json';
-import bookingroom from './bookingroom.json';
-import supplychain from './supplychain.json';
-import customerTrendsDataAnalysis from './customer-trends-data-analysis.json';
-import coffeeSalesDashboard from './coffee-sales-dashboard.json';
-import covidAlert from './covid-alert.json';
+import fs from 'fs';
+import path from 'path';
 
-export const projects = [
-  landingTrip,
-  blogLandingpage,
-  typeset,
-  flexneat,
-  promptHub,
-  virtualg,
-  finova,
-  supplychain,
-  customerTrendsDataAnalysis,
-  coffeeSalesDashboard,
-  bookingroom,
-  covidAlert,
-];
+const PROJECTS_DIR = path.join(process.cwd(), 'data', 'projects');
+const REQUIRED_FIELDS = ['id', 'title', 'description', 'image'];
+
+function loadProjects() {
+  const files = fs
+    .readdirSync(PROJECTS_DIR)
+    .filter((file) => file.endsWith('.json') && file !== 'TEMPLATE.json');
+
+  const seenIds = new Set();
+
+  const loaded = files.map((file) => {
+    const raw = fs.readFileSync(path.join(PROJECTS_DIR, file), 'utf-8');
+    const project = JSON.parse(raw);
+
+    for (const field of REQUIRED_FIELDS) {
+      if (!project[field]) {
+        throw new Error(
+          `Invalid project file "${file}": missing required field "${field}".`
+        );
+      }
+    }
+
+    if (seenIds.has(project.id)) {
+      throw new Error(
+        `Invalid project file "${file}": duplicate project id "${project.id}".`
+      );
+    }
+    seenIds.add(project.id);
+
+    return project;
+  });
+
+  return loaded.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+}
+
+export const projects = loadProjects();
 
 export const getProjectById = (id) => {
   return projects.find(project => project.id === id) || null;

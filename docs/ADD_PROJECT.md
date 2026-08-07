@@ -2,6 +2,10 @@
 
 Ce guide explique comment ajouter un nouveau projet a votre portfolio.
 
+Tous les fichiers `.json` du dossier `data/projects/` (sauf `TEMPLATE.json`)
+sont charges automatiquement au build, tries par le champ `order`. Il suffit
+de deposer le JSON et l'image, aucun autre fichier n'a besoin d'etre modifie.
+
 ## Etape 1: Creer le fichier JSON
 
 1. Copiez le fichier template dans le dossier `data/projects/`
@@ -33,21 +37,7 @@ Ce guide explique comment ajouter un nouveau projet a votre portfolio.
 }
 ```
 
-## Etape 2: Mettre a jour l'index
-
-Ajoutez votre projet dans `data/projects/index.js`:
-
-```javascript
-import monNouveauProjet from './mon-nouveau-projet.json';
-
-export const projects = [
-  covidAlert,
-  landingTrip,
-  monNouveauProjet,
-];
-```
-
-## Etape 3: Ajouter l'image
+## Etape 2: Ajouter l'image
 
 Placez votre image dans le dossier `public/`:
 

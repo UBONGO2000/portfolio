@@ -1,6 +1,34 @@
+import fs from 'fs';
+import path from 'path';
 import { projects, getProjectById, getAllProjectIds } from '@/data/projects';
 
 describe('Projects Data', () => {
+  describe('automatic loading', () => {
+    it('should load every JSON file in data/projects (except TEMPLATE.json)', () => {
+      const projectsDir = path.join(process.cwd(), 'data', 'projects');
+      const jsonFiles = fs
+        .readdirSync(projectsDir)
+        .filter((file) => file.endsWith('.json') && file !== 'TEMPLATE.json');
+
+      expect(projects.length).toBe(jsonFiles.length);
+
+      const ids = new Set(projects.map((p) => p.id));
+      jsonFiles.forEach((file) => {
+        const raw = fs.readFileSync(path.join(projectsDir, file), 'utf-8');
+        const project = JSON.parse(raw);
+        expect(ids.has(project.id)).toBe(true);
+      });
+    });
+
+    it('should sort projects by ascending order', () => {
+      for (let i = 1; i < projects.length; i++) {
+        const previousOrder = projects[i - 1].order ?? 0;
+        const currentOrder = projects[i].order ?? 0;
+        expect(currentOrder).toBeGreaterThanOrEqual(previousOrder);
+      }
+    });
+  });
+
   describe('projects', () => {
     it('should have at least one project', () => {
       expect(projects.length).toBeGreaterThan(0);
