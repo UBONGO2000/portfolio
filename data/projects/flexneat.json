@@ -33,6 +33,11 @@
     "fr": "Ce projet a été l'occasion de comprendre en profondeur les appels asynchrones et la gestion des erreurs réseau. L'intégration de l'API TVMaze avec jQuery m'a appris à structurer les requêtes AJAX, gérer les timeouts et afficher des retours utilisateur appropriés en cas d'échec.",
     "en": "This project was an opportunity to deeply understand asynchronous calls and network error management. Integrating the TVMaze API with jQuery taught me to structure AJAX requests, handle timeouts, and display appropriate user feedback in case of failure."
   },
+<<<<<<< HEAD
   "order": 3,
   "tier": "learning"
+=======
+  "tier": "learning",
+  "order": 11
+>>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 }

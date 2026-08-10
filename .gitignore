@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# auto-generated from data/projects/*.json - see scripts/generate-projects-index.js
+/data/projects/generated.json
+
 # next.js
 /.next/
 /out/

@@ -60,6 +60,11 @@
     "fr": "Le principal defi a ete de transformer un dataset de commandes brut en un classeur exploitable : relier les tables clients et produits aux commandes, fiabiliser les libelles, calculer les ventes, puis organiser les resultats dans des tableaux et graphiques clairs pour obtenir une lecture rapide des performances commerciales.",
     "en": "The main challenge was turning a raw orders dataset into a usable workbook: connecting customer and product tables to orders, making labels reliable, calculating sales, then organizing the results into clear tables and charts for quick business performance reading."
   },
+<<<<<<< HEAD
   "order": 1,
   "tier": "data"
+=======
+  "tier": "data",
+  "order": 7
+>>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 }

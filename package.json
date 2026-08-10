@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "generate:projects": "node scripts/generate-projects-index.js",
+    "dev": "npm run generate:projects && next dev --turbopack",
+    "build": "npm run generate:projects && next build",
     "start": "npm run serve:static",
     "serve:static": "serve -s out",
     "preview": "npm run build && npm run serve:static",
     "lint": "next lint",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test": "npm run generate:projects && jest",
+    "test:watch": "npm run generate:projects && jest --watch",
+    "test:coverage": "npm run generate:projects && jest --coverage"
   },
   "dependencies": {
     "next": "^15.5.23",

@@ -37,6 +37,11 @@
     "fr": "Construire une SPA sans framework a été le plus grand défi : router, gestion d'état et navigation sans rechargement, tout en vanilla JS. Consommer plusieurs APIs en parallèle (Promise.all) avec gestion d'erreurs et cache m'a forcé à écrire un client HTTP structuré. Les graphiques Canvas — axes, labels, rendu HiDPI — ont été un excellent exercice de compréhension du Canvas API.",
     "en": "Building a SPA without a framework was the biggest challenge: router, state management, and navigation without reloading, all in vanilla JS. Consuming multiple APIs in parallel (Promise.all) with error handling and caching forced me to write a structured HTTP client. The Canvas charts — axes, labels, HiDPI rendering — were an excellent exercise in understanding the Canvas API."
   },
+<<<<<<< HEAD
   "order": 3,
   "tier": "primary"
+=======
+  "tier": "primary",
+  "order": 3
+>>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 }

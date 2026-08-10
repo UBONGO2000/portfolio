@@ -9,7 +9,11 @@ on:
       - master
 
 jobs:
+<<<<<<< HEAD
   build-and-test:
+=======
+  build:
+>>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
     runs-on: ubuntu-latest
 
     steps:

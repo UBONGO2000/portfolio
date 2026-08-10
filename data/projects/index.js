@@ -1,6 +1,7 @@
 /**
  * Projects Index
  *
+<<<<<<< HEAD
  * Automatically loads every project JSON file in this directory (except
  * TEMPLATE.json) at build time and exposes it as `projects`, sorted by the
  * `order` field. To add a project, just drop a JSON file here - no other
@@ -53,6 +54,18 @@ function loadProjects() {
 }
 
 export const projects = loadProjects();
+=======
+ * `generated.json` is produced by scripts/generate-projects-index.js, which
+ * scans every *.json file in this directory (except TEMPLATE.json), validates
+ * it, and sorts it by `order`. That script runs automatically before
+ * dev/build/test (see package.json). To add a project: drop a new JSON file
+ * here (+ its image in public/) - nothing else needs to change.
+ */
+
+import generatedProjects from './generated.json';
+
+export const projects = generatedProjects;
+>>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 
 export const getProjectById = (id) => {
   return projects.find(project => project.id === id) || null;
