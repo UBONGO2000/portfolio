@@ -10,7 +10,7 @@ describe('Projects Data', () => {
       const projectsDir = path.join(process.cwd(), 'data', 'projects');
       const jsonFiles = fs
         .readdirSync(projectsDir)
-        .filter((file) => file.endsWith('.json') && file !== 'TEMPLATE.json');
+        .filter((file) => file.endsWith('.json') && !['TEMPLATE.json', 'generated.json'].includes(file));
 
       expect(projects.length).toBe(jsonFiles.length);
 

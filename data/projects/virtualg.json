@@ -33,11 +33,6 @@
     "fr": "Ce projet m'a poussé à comprendre la composition de composants React, la gestion du state local vs global, et les bonnes pratiques de structuration d'un projet React. L'implémentation d'animations fluides sans bibliothèque externe a été un exercice formateur sur les capacités de CSS combinées au rendu React.",
     "en": "This project pushed me to understand React component composition, local vs global state management, and best practices for structuring a React project. Implementing smooth animations without an external library was a formative exercise on CSS capabilities combined with React rendering."
   },
-<<<<<<< HEAD
-  "order": 1,
-  "tier": "secondary"
-=======
   "tier": "secondary",
   "order": 5
->>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 }

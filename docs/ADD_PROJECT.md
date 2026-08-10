@@ -34,13 +34,8 @@ aucun autre fichier n'a besoin d'etre modifie.
     "fr": "Description du defi releve en francais...",
     "en": "Description of challenges faced in English..."
   },
-<<<<<<< HEAD
-  "order": 0,
-  "tier": "secondary"
-=======
   "tier": "secondary",
   "order": 0
->>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 }
 ```
 
@@ -76,45 +71,25 @@ clair plutot que de casser le rendu du site en silence.
 | `fullDescription` | object | Descriptions FR/EN |
 | `features` | object | Liste fonctionnalites FR/EN |
 | `challenges` | object | Defis FR/EN |
-<<<<<<< HEAD
-| `order` | number | Ordre d'affichage au sein de son `tier` |
-| `tier` | string | Niveau de mise en avant sur la page d'accueil (voir ci-dessous) |
-
-## Le champ `tier`
-
-Le champ `tier` controle ou et comment le projet apparait sur la page d'accueil.
-Il est obligatoire - le build echoue avec une erreur claire si absent ou invalide.
-Valeurs possibles :
-=======
 | `tier` | string | Niveau de mise en avant sur la page d'accueil (voir ci-dessous) |
 | `order` | number | Ordre d'affichage au sein de son `tier` |
 
 ## Le champ `tier`
 
-Controle ou et comment le projet apparait sur la page d'accueil (`app/components/Work.jsx`) :
->>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
+Controle ou et comment le projet apparait sur la page d'accueil (`app/components/Work.jsx`).
+Un projet sans `tier` valide n'apparaitra dans aucune section de la page
+d'accueil : renseignez toujours ce champ.
 
 | Valeur | Effet |
 | --- | --- |
 | `primary` | Projet phare, affiche en premier dans la grille principale |
 | `secondary` | Projet correct mais moins abouti, affiche apres les `primary` dans la meme grille |
-<<<<<<< HEAD
 | `data` | Projet d'analyse de donnees, regroupe dans sa propre sous-section "Projets data & analyse" |
-| `learning` | Premier projet d'apprentissage (HTML/CSS/JS basique), place dans le bloc repliable "Voir plus de projets" |
+| `learning` | Projet d'apprentissage precoce, range dans le bloc repliable "Voir plus de projets" (ferme par defaut) |
 
 Dans le doute, utilisez `secondary` : c'est l'option la plus neutre pour un
 nouveau projet qui n'est ni un travail phare ni un exercice d'apprentissage
 precoce.
-=======
-| `data` | Regroupe avec les autres projets data dans la sous-section "Projets data & analyse" |
-| `learning` | Projet d'apprentissage precoce, range dans le bloc repliable "Voir plus de projets" (ferme par defaut) |
-
-Si `tier` est absent ou ne correspond a aucune de ces valeurs, le projet est
-affiche par defaut dans la grille principale (comme `secondary`) plutot que
-d'etre masque silencieusement. Sans avis contraire, utilisez `secondary` par
-defaut pour un nouveau projet - reservez `primary` aux projets que vous
-choisissez deliberement de mettre en avant.
->>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
 
 ## Tips
 

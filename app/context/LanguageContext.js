@@ -22,14 +22,6 @@ export const translations = {
     about: {
       title: 'À propos de moi',
       introduction: 'Introduction',
-<<<<<<< HEAD
-      description: "Curieux de tout ce qui touche à l'informatique, j'aime comprendre comment les outils numériques sont conçus et comment ils peuvent répondre à des besoins concrets. Je suis particulièrement passionné par le développement logiciel, du frontend au backend, et mon parcours en mathématiques nourrit mon goût pour la logique, l'analyse et la résolution de problèmes, avec une curiosité qui s'étend aussi aux métiers de la data.",
-      languages: 'LANGAGES',
-      backend: 'BACKEND',
-      frontend: 'FRONTEND',
-      databases: 'BASES DE DONNÉES',
-      tools: 'OUTILS & DEVOPS',
-=======
       description: "Curieux de tout ce qui touche à l'informatique, j'aime comprendre comment les outils numériques sont conçus et comment ils peuvent répondre à des besoins concrets. Je suis particulièrement passionné par le développement logiciel, du frontend au backend, et mon parcours en mathématiques nourrit mon goût pour la logique, l'analyse et la résolution de problèmes — ce qui m'ouvre aussi une curiosité pour les métiers de la data.",
       technologies: 'TECHNOLOGIES',
       categoryLanguages: 'Langages',
@@ -37,7 +29,6 @@ export const translations = {
       categoryFrontend: 'Frontend',
       categoryDatabases: 'Bases de données',
       categoryDevTools: 'Outils & DevOps',
->>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
       education: 'FORMATIONS',
       university: "Université de Yaoundé 1",
       bachelorMath: "Licence de mathématiques",
@@ -94,14 +85,6 @@ export const translations = {
     about: {
       title: 'About me',
       introduction: 'Introduction',
-<<<<<<< HEAD
-      description: "Curious about everything related to computer science, I enjoy understanding how digital tools are designed and how they can solve real needs. I am especially passionate about software development, from frontend to backend, and my mathematics background strengthens my taste for logic, analysis and problem solving, with a curiosity that also extends to data-related roles.",
-      languages: 'LANGUAGES',
-      backend: 'BACKEND',
-      frontend: 'FRONTEND',
-      databases: 'DATABASES',
-      tools: 'TOOLS & DEVOPS',
-=======
       description: "Curious about everything related to computer science, I enjoy understanding how digital tools are designed and how they can solve real needs. I am especially passionate about software development, from frontend to backend, and my mathematics background strengthens my taste for logic, analysis and problem solving — which also leaves me curious about data-related roles.",
       technologies: 'TECHNOLOGIES',
       categoryLanguages: 'Languages',
@@ -109,7 +92,6 @@ export const translations = {
       categoryFrontend: 'Frontend',
       categoryDatabases: 'Databases',
       categoryDevTools: 'Tools & DevOps',
->>>>>>> f14095ac163694bc8a61bb7a83473e08aeadd42d
       education: 'EDUCATION',
       university: 'University of Yaoundé 1',
       bachelorMath: "Bachelor's degree in mathematics",
