@@ -109,7 +109,7 @@ This website does not use tracking cookies or advertising cookies.`,
     <>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
       
-      <div className="min-h-screen pt-24 px-[12%] pb-12">
+      <div className="min-h-screen pt-24 px-[6%] sm:px-[8%] lg:px-[12%] pb-12">
         <div className="max-w-3xl mx-auto">
           <Link 
             href="/" 

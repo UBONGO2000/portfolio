@@ -57,5 +57,6 @@
     "en": "The main challenge of this project was customizing and extending a tutorial-based project with advanced features: implementing complete JWT authentication with route guards, creating a voting system with concurrent state management, integrating a dynamic theme system, and optimizing performance with Angular 21's new features (signals, @defer blocks, OnPush). Managing persistence with a local JSON file also required careful attention to handle schema migrations and concurrent access."
   },
   "tier": "primary",
-  "order": 4
+  "order": 4,
+  "featured": true
 }

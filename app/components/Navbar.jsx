@@ -1,6 +1,7 @@
 import { assets } from '@/assets/assets'
 import React, { useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { MdArrowOutward } from "react-icons/md";
 import { IoMoonOutline,IoCloseOutline,IoSunnySharp } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
@@ -52,6 +53,7 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
                 <li><a className='font-Ovo' href="#top">{t.nav.home}</a></li>
                 <li><a className='font-Ovo' href="#about">{t.nav.about}</a></li>
                 <li><a className='font-Ovo' href="#work">{t.nav.work}</a></li>
+                <li><Link className='font-Ovo' href="/archives">{t.nav.archives}</Link></li>
                 <li><a className='font-Ovo' href="#contact">{t.nav.contact}</a></li>
             </ul>
 
@@ -91,6 +93,7 @@ const Navbar = ({isDarkMode,setIsDarkMode,isScroll}) => {
                 <li><a onClick={closeMenu} className='font-Ovo' href="#top">{t.nav.home}</a></li>
                 <li><a onClick={closeMenu} className='font-Ovo' href="#about">{t.nav.about}</a></li>
                 <li><a onClick={closeMenu} className='font-Ovo' href="#work">{t.nav.work}</a></li>
+                <li><Link onClick={closeMenu} className='font-Ovo' href="/archives">{t.nav.archives}</Link></li>
                 <li><a onClick={closeMenu} className='font-Ovo' href="#contact">{t.nav.contact}</a></li>
             </ul>
 

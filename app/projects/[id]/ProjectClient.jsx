@@ -63,7 +63,7 @@ export default function ProjectClient({ project, projectId }) {
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isScroll={isScroll} />
 
       <motion.div
-        className="min-h-screen pt-20 px-[12%]"
+        className="min-h-screen pt-20 px-[6%] sm:px-[8%] lg:px-[12%]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

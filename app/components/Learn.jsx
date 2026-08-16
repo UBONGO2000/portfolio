@@ -134,7 +134,7 @@ const Learn = ({ projects = [] }) => {
   return (
     <motion.section
       id="learn"
-      className="w-full px-[12%] py-16 scroll-mt-20 bg-white dark:bg-darkTheme"
+      className="w-full px-[6%] sm:px-[8%] lg:px-[12%] py-16 scroll-mt-20 bg-white dark:bg-darkTheme"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"

@@ -3,9 +3,10 @@
 Ce guide explique comment ajouter un nouveau projet a votre portfolio.
 
 Tous les fichiers `.json` du dossier `data/projects/` (sauf `TEMPLATE.json`)
-sont charges automatiquement au build, groupes par `tier` puis tries par
-`order` au sein de chaque groupe. Il suffit de deposer le JSON et l'image,
-aucun autre fichier n'a besoin d'etre modifie.
+sont charges automatiquement au build et tries par `order` au sein de leur
+`tier`. Les projets `featured: true` s'affichent sur la page d'accueil ; tous
+les autres atterrissent sur `/archives`, regroupes par `tier`. Il suffit de
+deposer le JSON et l'image, aucun autre fichier n'a besoin d'etre modifie.
 
 ## Etape 1: Creer le fichier JSON
 
@@ -71,21 +72,28 @@ clair plutot que de casser le rendu du site en silence.
 | `fullDescription` | object | Descriptions FR/EN |
 | `features` | object | Liste fonctionnalites FR/EN |
 | `challenges` | object | Defis FR/EN |
-| `tier` | string | Niveau de mise en avant sur la page d'accueil (voir ci-dessous) |
+| `tier` | string | Categorie du projet, utilisee pour le regroupement sur `/archives` (voir ci-dessous) |
 | `order` | number | Ordre d'affichage au sein de son `tier` |
+| `featured` | boolean | `true` pour afficher le projet sur la page d'accueil (voir ci-dessous) |
+
+## Le champ `featured`
+
+Seuls les projets avec `"featured": true` apparaissent sur la page d'accueil
+(`app/components/Work.jsx`). Actuellement, ce sont supplychain, bookingroom et
+prompt-hub. Tous les autres projets (`featured` absent ou `false`) sont
+listes sur la page `/archives` (`app/archives/ArchivesClient.jsx`), regroupes
+par `tier`.
 
 ## Le champ `tier`
 
-Controle ou et comment le projet apparait sur la page d'accueil (`app/components/Work.jsx`).
-Un projet sans `tier` valide n'apparaitra dans aucune section de la page
-d'accueil : renseignez toujours ce champ.
+Controle dans quelle sous-section de la page `/archives` un projet non `featured`
+apparait.
 
 | Valeur | Effet |
 | --- | --- |
-| `primary` | Projet phare, affiche en premier dans la grille principale |
-| `secondary` | Projet correct mais moins abouti, affiche apres les `primary` dans la meme grille |
-| `data` | Projet d'analyse de donnees, regroupe dans sa propre sous-section "Projets data & analyse" |
-| `learning` | Projet d'apprentissage precoce, range dans le bloc repliable "Voir plus de projets" (ferme par defaut) |
+| `primary` / `secondary` | Regroupes dans la section "Projets web & applicatifs" |
+| `data` | Projet d'analyse de donnees, regroupe dans la section "Projets data & analyse" |
+| `learning` | Projet d'apprentissage precoce, regroupe dans la section "Projets d'apprentissage" |
 
 Dans le doute, utilisez `secondary` : c'est l'option la plus neutre pour un
 nouveau projet qui n'est ni un travail phare ni un exercice d'apprentissage

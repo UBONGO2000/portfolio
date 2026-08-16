@@ -96,6 +96,13 @@ describe('Projects Data', () => {
         .map((p) => p.id);
       expect(primaryIds).toEqual(['supplychain', 'bookingroom', 'finova', 'Prompt-hub']);
     });
+
+    it('should only feature supplychain, bookingroom and prompt-hub on the home page', () => {
+      const featuredIds = projects
+        .filter((p) => p.featured)
+        .map((p) => p.id);
+      expect(new Set(featuredIds)).toEqual(new Set(['supplychain', 'bookingroom', 'Prompt-hub']));
+    });
   });
 
   describe('getProjectById', () => {

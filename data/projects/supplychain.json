@@ -40,5 +40,6 @@
     "en": "Designing an atomic inventory reservation system during order creation that ensures data integrity without excessive database locking. Structuring complex SQL queries with SQLAlchemy for analytics (multi-table aggregations, reorder subqueries). Implementing granular 4-level access control without bloating business logic, and managing CORS configuration to support both local development and multi-origin deployment (Render + Vercel)."
   },
   "tier": "primary",
-  "order": 1
+  "order": 1,
+  "featured": true
 }

@@ -40,5 +40,6 @@
     "en": "Authentication with Spring Security and role management was a real headache at first. Handling simultaneous reservation conflicts (availability checking, transactions) forced me to understand concurrency challenges. Dockerization and deployment on Render introduced me to DevOps — a field I'm still exploring."
   },
   "tier": "primary",
-  "order": 2
+  "order": 2,
+  "featured": true
 }
