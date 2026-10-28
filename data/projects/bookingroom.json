@@ -2,42 +2,48 @@
   "id": "bookingroom",
   "title": "BookingRoom",
   "description": {
-    "fr": "Application de réservation de salles avec Spring Boot, authentification et déploiement Docker",
-    "en": "Room booking application with Spring Boot, authentication and Docker deployment."
+    "fr": "Application de réservation de salles avec Spring Boot : sécurité, API REST, PostgreSQL, tests automatisés et CI/CD Docker vers Render.",
+    "en": "Room booking application with Spring Boot: security, REST API, PostgreSQL, automated tests and Docker-based CI/CD to Render."
   },
   "image": "/bookingroom.jpg",
   "github": "https://github.com/UBONGO2000/BookingRoom/",
-  "demo": "https://bookingroom-qv0y.onrender.com/",
-  "technologies": ["Java", "Spring Boot", "Spring Security", "Thymeleaf", "PostgreSQL", "Docker"],
+  "demo": "https://bookingroom-db.onrender.com",
+  "technologies": ["Java 21", "Spring Boot", "Spring Security", "Spring Data JPA", "Thymeleaf", "PostgreSQL", "Flyway", "Docker", "Docker Compose", "GitHub Actions", "Render", "JUnit 5", "Mockito", "OpenAPI"],
   "fullDescription": {
-    "fr": "BookingRoom est une application de réservation de salles développée avec Spring Boot. Ce projet m'a permis de toucher à toute la chaîne backend : API REST, authentification avec Spring Security, base de données PostgreSQL avec JPA, rendu côté serveur avec Thymeleaf, et déploiement via Docker sur Render. C'est le projet qui m'a le plus appris sur les enjeux d'une application côté serveur — de la sécurité à la mise en production.",
-    "en": "BookingRoom is a room booking application developed with Spring Boot. This project allowed me to work through the entire backend chain: REST API, authentication with Spring Security, PostgreSQL database with JPA, server-side rendering with Thymeleaf, and deployment via Docker on Render. It's the project that taught me the most about server-side application challenges — from security to production deployment."
+    "fr": "BookingRoom est une application de réservation de salles développée avec Spring Boot. Au-delà du CRUD, le projet couvre toute la chaîne d'une application serveur : authentification par session avec rôles USER/ADMIN, durcissement des en-têtes HTTP et anti brute-force, API REST documentée, recherches paginées exécutées en base, schéma versionné avec Flyway, et une suite de 124 tests avec seuils de couverture bloquants. Le déploiement est automatisé par GitHub Actions : le build et les tests valident chaque commit, puis Render ne déploie qu'en cas de succès, avec une vérification que le commit attendu est réellement en ligne.",
+    "en": "BookingRoom is a room booking application built with Spring Boot. Beyond CRUD, it covers the whole server-side chain: session-based authentication with USER/ADMIN roles, hardened HTTP headers and brute-force protection, a documented REST API, paginated database-side search, a Flyway-versioned schema, and a suite of 124 tests with enforcing coverage thresholds. Deployment is automated with GitHub Actions: every commit is built and tested, Render deploys only on success, and the pipeline verifies that the expected commit is actually live."
   },
   "features": {
     "fr": [
-      "Authentification et autorisation avec Spring Security (rôles USER/ADMIN)",
-      "CRUD complet pour les salles, utilisateurs et réservations",
-      "Espace administrateur avec tableau de bord",
-      "Recherche avancée de salles (capacité, équipements, disponibilité)",
-      "Validation des données côté serveur",
-      "Base de données PostgreSQL avec JPA/Hibernate",
-      "Dockerisation (Dockerfile + docker-compose)",
-      "Déploiement sur Render"
+      "Authentification par session et rôles USER/ADMIN, CSRF, cookies HttpOnly/SameSite et en-têtes CSP/HSTS",
+      "Protection anti brute-force : verrouillage de compte et limitation du débit par IP",
+      "CRUD des salles côté admin (équipements, activation/désactivation) et parcours de réservation côté utilisateur",
+      "Recherche paginée exécutée en base (nom, capacité, équipements) avec conservation des filtres",
+      "Détection des conflits de créneau (transaction et verrou) et annulation logique (statut CANCELLED)",
+      "API REST basée session : DTO, statuts HTTP, CORS configurable et spécification OpenAPI en JSON",
+      "Validation serveur (Bean Validation, messages FR) et erreurs 404/403 propres, sans fuite de données",
+      "Schéma versionné avec Flyway (ddl-auto=validate) et profils dev, demo, prod et test",
+      "Image Docker multi-étapes exécutée sans root, healthcheck et docker compose (application + PostgreSQL)",
+      "CI/CD GitHub Actions : build, 124 tests, seuils JaCoCo, déploiement Render conditionné et smoke test du commit déployé",
+      "Logs JSON en production et endpoints Actuator (health, info) pour le monitoring"
     ],
     "en": [
-      "Authentication and authorization with Spring Security (USER/ADMIN roles)",
-      "Complete CRUD for rooms, users, and reservations",
-      "Admin space with dashboard",
-      "Advanced room search (capacity, equipment, availability)",
-      "Server-side data validation",
-      "PostgreSQL database with JPA/Hibernate",
-      "Containerization (Dockerfile + docker-compose)",
-      "Deployment on Render"
+      "Session-based authentication with USER/ADMIN roles, CSRF, HttpOnly/SameSite cookies and CSP/HSTS headers",
+      "Brute-force protection: account lockout and per-IP rate limiting",
+      "Admin CRUD for rooms (equipment, enable/disable) and the full user booking flow",
+      "Paginated database-side search (name, capacity, equipment) with filter persistence",
+      "Time-slot conflict detection (transaction and lock) and soft cancellation (CANCELLED status)",
+      "Session-based REST API: DTOs, HTTP statuses, configurable CORS and a JSON OpenAPI specification",
+      "Server-side validation (Bean Validation, French messages) and clean 404/403 errors without data leaks",
+      "Flyway-versioned schema (ddl-auto=validate) and dev, demo, prod and test profiles",
+      "Multi-stage Docker image running as non-root, with healthcheck and docker compose (app + PostgreSQL)",
+      "GitHub Actions CI/CD: build, 124 tests, JaCoCo thresholds, gated Render deployment and a smoke test of the deployed commit",
+      "JSON logs in production and Actuator endpoints (health, info) for monitoring"
     ]
   },
   "challenges": {
-    "fr": "L'authentification avec Spring Security et la gestion des rôles a été un vrai casse-tête au début. Gérer les conflits de réservations simultanées (vérification de disponibilité, transactions) m'a forcé à comprendre les enjeux de concurrence. La Dockerisation et le déploiement sur Render m'ont initié à DevOps — un domaine que je continue d'explorer.",
-    "en": "Authentication with Spring Security and role management was a real headache at first. Handling simultaneous reservation conflicts (availability checking, transactions) forced me to understand concurrency challenges. Dockerization and deployment on Render introduced me to DevOps — a field I'm still exploring."
+    "fr": "La sécurité a été le fil rouge : Spring Security avec sessions et CSRF, protection contre l'IDOR sur les réservations, en-têtes CSP stricts (qui m'ont obligé à renoncer à Swagger UI), verrouillage après échecs de connexion. Côté données, j'ai dû corriger des requêtes N+1, déplacer la recherche et la pagination en base avec des Specifications, et sécuriser la création de réservation face aux accès concurrents via une transaction et un verrou. Enfin, la mise en place du CI/CD m'a fait comprendre qu'un déploiement doit être prouvé : le pipeline compare le SHA du commit attendu à celui exposé par /actuator/info, plutôt que de se fier à un simple code HTTP 200.",
+    "en": "Security was the common thread: Spring Security with sessions and CSRF, IDOR protection on bookings, strict CSP headers (which forced me to drop Swagger UI), and lockout after repeated login failures. On the data side, I had to fix N+1 queries, move search and pagination into the database with Specifications, and secure booking creation against concurrent access using a transaction and a lock. Finally, setting up CI/CD taught me that a deployment must be proven: the pipeline compares the expected commit SHA with the one exposed by /actuator/info instead of trusting a plain HTTP 200."
   },
   "tier": "primary",
   "order": 2,
